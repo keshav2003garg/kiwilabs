@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI-generated website" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Performance optimization: Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f8f8f8',
+                100: '#e8e8e8',
+                200: '#d3d3d3',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#525252',
+                600: '#404040',
+                700: '#262626',
+                800: '#171717',
+                900: '#0a0a0a',
+                950: '#030303',
+              },
+              secondary: {
+                50: '#f8f8f8',
+                100: '#e8e8e8',
+                200: '#d3d3d3',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#525252',
+                600: '#404040',
+                700: '#262626',
+                800: '#171717',
+                900: '#0a0a0a',
+                950: '#030303',
+              },
+              accent: {
+                50: '#f8f8f8',
+                100: '#e8e8e8',
+                200: '#d3d3d3',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#525252',
+                600: '#404040',
+                700: '#262626',
+                800: '#171717',
+                900: '#0a0a0a',
+                950: '#030303',
+              },
+            },
+            fontFamily: {
+              sans: [
+                'Inter',
+                'system-ui',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'sans-serif',
+              ],
+              heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+            },
+            spacing: {
+              18: '4.5rem',
+              22: '5.5rem',
+              30: '7.5rem',
+            },
+            maxWidth: {
+              '8xl': '88rem',
+              '9xl': '96rem',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in',
+              'fade-out': 'fadeOut 0.5s ease-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+              'slide-down': 'slideDown 0.5s ease-out',
+              'slide-left': 'slideLeft 0.5s ease-out',
+              'slide-right': 'slideRight 0.5s ease-out',
+              'scale-in': 'scaleIn 0.5s ease-out',
+              'scale-out': 'scaleOut 0.5s ease-out',
+              'spin-slow': 'spin 3s linear infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              float: 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeOut: {
+                '0%': { opacity: '1' },
+                '100%': { opacity: '0' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideDown: {
+                '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideLeft: {
+                '0%': { transform: 'translateX(20px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              slideRight: {
+                '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.9)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              scaleOut: {
+                '0%': { transform: 'scale(1.1)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            },
+            aspectRatio: {
+              portrait: '3/4',
+              landscape: '4/3',
+              ultrawide: '21/9',
+            },
+          },
+        },
+        variants: {
+          extend: {
+            opacity: ['disabled'],
+            cursor: ['disabled'],
+            backgroundColor: ['active', 'disabled'],
+            textColor: ['active', 'disabled'],
+          },
+        },
+      };
+    </script>
+
+    <!-- Utilities and Components -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"
+    ></script>
+
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Base Styles -->
+    <style>
+      * {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      /* Webkit browsers like Chrome, Safari, newer Edge */
+      *::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #666;
+      }
+
+      /* Remove tap highlight on mobile */
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Improve text rendering */
+      body {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Focus outline styles */
+      :focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+
+      /* Print styles */
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        a[href]:after {
+          content: ' (' attr(href) ')';
+        }
+      }
+    </style>
+
+    <!-- Enhanced Image Handler -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const imageObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          },
+          {
+            rootMargin: '50px 0px',
+            threshold: 0.01,
+          }
+        );
+
+        const loadImage = (img) => {
+          if ('loading' in HTMLImageElement.prototype) {
+            img.loading = 'lazy';
+          }
+
+          img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+
+          img.onerror = () => {
+            const width = img.getAttribute('width') || img.clientWidth || 300;
+            const height =
+              img.getAttribute('height') || img.clientHeight || 200;
+            img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+            img.alt = 'Image unavailable';
+            img.classList.remove('opacity-0');
+            img.classList.add('opacity-100', 'error-image');
+          };
+
+          if (img.dataset.src) {
+            imageObserver.observe(img);
+          } else {
+            img.classList.remove('opacity-0');
+            img.classList.add('opacity-100');
+          }
+        };
+
+        document
+          .querySelectorAll('img[data-src], img:not([data-src])')
+          .forEach(loadImage);
+
+        // Watch for dynamically added images
+        new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeType === 1) {
+                if (node.tagName === 'IMG') {
+                  loadImage(node);
+                }
+                node.querySelectorAll('img').forEach(loadImage);
+              }
+            });
+          });
+        }).observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      });
+
+      // Performance monitoring
+      if ('performance' in window && 'PerformanceObserver' in window) {
+        // Create performance observer
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              // console.log(`LCP: ${entry.startTime}ms`);
+            }
+            if (entry.entryType === 'first-input') {
+              // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+            }
+            if (entry.entryType === 'layout-shift') {
+              // console.log(`CLS: ${entry.value}`);
+            }
+          });
+        });
+
+        // Observe performance metrics
+        observer.observe({
+          entryTypes: [
+            'largest-contentful-paint',
+            'first-input',
+            'layout-shift',
+          ],
+        });
+
+        // Log basic performance metrics
+        window.addEventListener('load', () => {
+          const timing = performance.getEntriesByType('navigation')[0];
+          console.log({
+            'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+            'TCP Connection': timing.connectEnd - timing.connectStart,
+            'DOM Content Loaded':
+              timing.domContentLoadedEventEnd - timing.navigationStart,
+            'Page Load': timing.loadEventEnd - timing.navigationStart,
+          });
+        });
+      }
+
+      // Handle offline/online status
+      window.addEventListener('online', () => {
+        document.body.classList.remove('offline');
+        console.log('Connection restored');
+      });
+
+      window.addEventListener('offline', () => {
+        document.body.classList.add('offline');
+        console.log('Connection lost');
+      });
+    </script>
+  </head>
+  <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black"
+    >
+      Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="relative z-50 bg-white dark:bg-gray-900">
+      <!-- Header content goes here -->
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative">
+      <!-- Content will be injected here -->
+    </main>
+  </body>
+</html>
+<htmlCode>
+  <div id="root">
+    <section id="navbar" class="bg-gray-900 text-white">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold">KiwiLabs</a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Models</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Pricing</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-300"
+              >Get Started</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 animate__animated animate__fadeIn"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Models</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Pricing</a
+            >
+            <a
+              href="#"
+              class="hover:text-green-400 transition-colors duration-300"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-300 text-center"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('animate__fadeIn');
+            mobileMenu.classList.remove('animate__fadeOut');
+          } else {
+            mobileMenu.classList.add('animate__fadeOut');
+            mobileMenu.classList.remove('animate__fadeIn');
+          }
+        });
+      </script>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section
+      id="hero"
+      class="bg-gray-900 text-white min-h-[70vh] flex items-center"
+    >
+      <div class="container mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8 animate__animated animate__fadeInLeft">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+              Create Custom AI Models for Your Business
+              <span class="text-green-400">at Unbeatable Prices</span>
+            </h1>
+            <p class="text-xl text-gray-300">
+              Transform your business with personalized AI models and agents.
+              Cut costs by 50% and accelerate timelines by 40-50%. Starting at
+              just $499.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#"
+                class="bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors duration-300 text-center animate__animated animate__pulse animate__infinite"
+              >
+                Get Started Now
+              </a>
+              <a
+                href="#"
+                class="border border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 text-center"
+              >
+                View Demo Models
+              </a>
+            </div>
+            <div class="flex items-center gap-6 text-sm">
+              <div class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>50% Cost Reduction</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>40-50% Faster Delivery</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative animate__animated animate__fadeInRight">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg blur opacity-75 animate__animated animate__pulse animate__infinite"
+            ></div>
+            <div class="relative bg-gray-800 p-8 rounded-lg shadow-xl">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                  <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <div class="space-y-2">
+                  <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+                  <div class="h-4 bg-gray-700 rounded"></div>
+                  <div class="h-4 bg-gray-700 rounded w-5/6"></div>
+                </div>
+                <div class="flex justify-center">
+                  <div class="text-green-400 text-6xl font-mono">AI</div>
+                </div>
+                <div class="space-y-2">
+                  <div class="h-4 bg-gray-700 rounded w-2/3"></div>
+                  <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="features" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn"
+          >
+            Transform Your Business with AI
+          </h2>
+          <p class="text-xl text-gray-600 animate__animated animate__fadeIn">
+            Discover how our customized AI solutions can revolutionize your
+            operations
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Feature 1 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
+          >
+            <div
+              class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Cost Reduction
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Cut operational costs by up to 50% with our efficient AI models
+              tailored to your business needs
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-green-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Automated workflows
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-green-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Reduced manual labor
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-green-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Optimized resources
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Faster Timeline
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Accelerate your project timelines by 40-50% with our efficient AI
+              implementation
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-blue-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Rapid deployment
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-blue-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Quick iterations
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-blue-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Faster results
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Custom Solutions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Tailored AI models starting at just $499, making advanced AI
+              accessible for all businesses
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Personalized models
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Flexible integration
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Scalable solutions
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn"
+          >
+            Our AI Services
+          </h2>
+          <p class="text-xl text-gray-600 animate__animated animate__fadeIn">
+            Comprehensive AI solutions tailored for your business needs
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Service Card 1 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInLeft"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-green-500 p-3 rounded-lg">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                  Custom AI Models
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Tailored AI solutions designed specifically for your business
+                  processes and requirements.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-green-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Starting at just $499
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-green-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Personalized training
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-green-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Regular updates and maintenance
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInRight"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-500 p-3 rounded-lg">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                  AI Agents Development
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Intelligent agents that automate your business processes and
+                  enhance productivity.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-blue-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    24/7 operational capability
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-blue-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Automated decision making
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-blue-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Scalable solutions
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInLeft"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-purple-500 p-3 rounded-lg">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                  Integration Services
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Seamless integration of AI models with your existing business
+                  systems.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-purple-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    API development
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-purple-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Custom workflows
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-purple-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Technical support
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInRight"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-orange-500 p-3 rounded-lg">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                  Maintenance & Support
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Continuous monitoring and optimization of your AI solutions.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-orange-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    24/7 monitoring
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-orange-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Performance optimization
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <svg
+                      class="w-4 h-4 text-orange-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    Regular updates
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="portfolio" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn"
+          >
+            Our AI Portfolio
+          </h2>
+          <p class="text-xl text-gray-600 animate__animated animate__fadeIn">
+            Discover the AI models we've created for various industries
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Portfolio Item 1 -->
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp"
+          >
+            <div class="p-6 space-y-4">
+              <div
+                class="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">
+                Document Processing AI
+              </h3>
+              <p class="text-gray-600">
+                Automated document processing system reducing manual work by 80%
+              </p>
+              <div class="space-y-2">
+                <p class="text-sm text-gray-500">Industry: Finance</p>
+                <p class="text-sm text-gray-500">Timeline: 2 weeks</p>
+                <p class="text-sm text-gray-500">Cost Reduction: 60%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="p-6 space-y-4">
+              <div
+                class="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">
+                Customer Service AI Agent
+              </h3>
+              <p class="text-gray-600">
+                24/7 automated customer support system with 95% satisfaction
+                rate
+              </p>
+              <div class="space-y-2">
+                <p class="text-sm text-gray-500">Industry: Retail</p>
+                <p class="text-sm text-gray-500">Timeline: 3 weeks</p>
+                <p class="text-sm text-gray-500">Cost Reduction: 50%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3 -->
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div class="p-6 space-y-4">
+              <div
+                class="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">
+                Predictive Analytics Model
+              </h3>
+              <p class="text-gray-600">
+                Sales forecasting system with 92% accuracy
+              </p>
+              <div class="space-y-2">
+                <p class="text-sm text-gray-500">Industry: E-commerce</p>
+                <p class="text-sm text-gray-500">Timeline: 4 weeks</p>
+                <p class="text-sm text-gray-500">ROI: 300%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a
+            href="#"
+            class="inline-flex items-center space-x-2 bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300 animate__animated animate__pulse animate__infinite"
+          >
+            <span>View More Case Studies</span>
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div
+          class="mt-20 bg-gray-50 rounded-2xl p-8 animate__animated animate__fadeIn"
+        >
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Project Statistics
+            </h3>
+            <p class="text-gray-600">Our impact in numbers</p>
+          </div>
+          <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div class="space-y-2">
+              <div class="text-4xl font-bold text-green-500">50+</div>
+              <p class="text-gray-600">AI Models Deployed</p>
+            </div>
+            <div class="space-y-2">
+              <div class="text-4xl font-bold text-blue-500">45%</div>
+              <p class="text-gray-600">Average Cost Reduction</p>
+            </div>
+            <div class="space-y-2">
+              <div class="text-4xl font-bold text-purple-500">98%</div>
+              <p class="text-gray-600">Client Satisfaction</p>
+            </div>
+            <div class="space-y-2">
+              <div class="text-4xl font-bold text-orange-500">3x</div>
+              <p class="text-gray-600">Average ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="pricing" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn"
+          >
+            Affordable AI Solutions
+          </h2>
+          <p class="text-xl text-gray-600 animate__animated animate__fadeIn">
+            Choose the perfect plan for your business needs
+          </p>
+        </div>
+
+        <div
+          class="grid lg:grid-cols-3 gap-8 animate__animated animate__fadeInUp"
+        >
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Starter</h3>
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-bold text-gray-800">$499</span>
+                <span class="text-gray-500 ml-2">/model</span>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Basic AI Model
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  2 Weeks Delivery
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Basic Integration
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Email Support
+                </li>
+              </ul>
+              <button
+                class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          <!-- Professional Plan -->
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 relative"
+          >
+            <div
+              class="absolute top-0 right-0 bg-green-500 text-white px-4 py-1 rounded-bl-lg"
+            >
+              Popular
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Professional
+              </h3>
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-bold text-gray-800">$999</span>
+                <span class="text-gray-500 ml-2">/model</span>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Advanced AI Model
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  1 Week Delivery
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Full Integration
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  24/7 Priority Support
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Custom Features
+                </li>
+              </ul>
+              <button
+                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors duration-300"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Enterprise</h3>
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-bold text-gray-800">Custom</span>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Multiple AI Models
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Custom Timeline
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Enterprise Integration
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Dedicated Support Team
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Custom Development
+                </li>
+              </ul>
+              <button
+                class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+              >
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 text-center bg-white p-8 rounded-2xl shadow-lg animate__animated animate__fadeIn"
+        >
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">
+            Need a Custom Solution?
+          </h3>
+          <p class="text-gray-600 mb-8">
+            Contact us for custom pricing and features tailored to your specific
+            needs
+          </p>
+          <button
+            class="bg-green-500 text-white py-3 px-8 rounded-lg hover:bg-green-600 transition-colors duration-300 inline-flex items-center"
+          >
+            <span>Schedule Consultation</span>
+            <svg
+              class="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="testimonials" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn">
+            What Our Clients Say
+          </h2>
+          <p class="text-xl text-gray-400 animate__animated animate__fadeIn">
+            Success stories from businesses that transformed with our AI
+            solutions
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-gray-800 p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center"
+              >
+                <span class="text-xl font-bold">T</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold">TechStart Solutions</h4>
+                <p class="text-gray-400">E-commerce</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6">
+              "KiwiLabs' AI solution reduced our customer service costs by 55%
+              while improving response times. The implementation was smooth and
+              the results were immediate."
+            </p>
+            <div class="flex items-center text-green-400">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-gray-800 p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center"
+              >
+                <span class="text-xl font-bold">G</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold">GrowthHub Analytics</h4>
+                <p class="text-gray-400">Marketing Agency</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6">
+              "The predictive analytics model from KiwiLabs helped us optimize
+              campaigns 40% faster. The ROI has been exceptional, and the price
+              point made it an easy decision."
+            </p>
+            <div class="flex items-center text-blue-400">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-gray-800 p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center"
+              >
+                <span class="text-xl font-bold">I</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold">InnovateTech Inc</h4>
+                <p class="text-gray-400">Software Development</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6">
+              "We integrated KiwiLabs' AI model into our development workflow
+              and saw a 45% reduction in QA time. The customization options are
+              incredible."
+            </p>
+            <div class="flex items-center text-purple-400">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-20">
+            <h2
+              class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn"
+            >
+              Get Started Today
+            </h2>
+            <p class="text-xl text-gray-600 animate__animated animate__fadeIn">
+              Transform your business with custom AI solutions
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Information -->
+            <div class="space-y-8 animate__animated animate__fadeInLeft">
+              <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                  Contact Information
+                </h3>
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <div
+                      class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="ml-4">
+                      <p class="text-gray-600">Phone</p>
+                      <p class="text-gray-800 font-semibold">
+                        +1 (555) 123-4567
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="ml-4">
+                      <p class="text-gray-600">Email</p>
+                      <p class="text-gray-800 font-semibold">
+                        contact@kiwilabs.ai
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="ml-4">
+                      <p class="text-gray-600">Location</p>
+                      <p class="text-gray-800 font-semibold">
+                        San Francisco, CA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg animate__animated animate__fadeInRight"
+            >
+              <form class="space-y-6">
+                <div>
+                  <label
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    for="name"
+                    >Full Name</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-300"
+                    type="text"
+                    id="name"
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    for="email"
+                    >Email Address</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-300"
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="john@company.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    for="company"
+                    >Company Name</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-300"
+                    type="text"
+                    id="company"
+                    required
+                    placeholder="Your Company"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    for="message"
+                    >Message</label
+                  >
+                  <textarea
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-300"
+                    id="message"
+                    rows="4"
+                    required
+                    placeholder="Tell us about your project"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors duration-300 font-semibold"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> </htmlCode
+><htmlCode>
+  <div id="root">
+    <section id="footer" class="bg-gray-900 text-gray-300">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <!-- Company Info -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-white">KiwiLabs</h3>
+            <p class="text-gray-400">
+              Transforming businesses with affordable AI solutions that drive
+              efficiency and growth.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-6">Quick Links</h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-6">Our Services</h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Custom AI Models</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >AI Agents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Integration Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-300"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-6">Stay Updated</h4>
+            <p class="mb-4">
+              Subscribe to our newsletter for the latest updates and AI
+              insights.
+            </p>
+            <form class="space-y-4">
+              <input
+                type="email"
+                class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-300"
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm">© 2024 KiwiLabs. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+              <a
+                href="#"
+                class="text-sm hover:text-white transition-colors duration-300"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-sm hover:text-white transition-colors duration-300"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-sm hover:text-white transition-colors duration-300"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</htmlCode>
