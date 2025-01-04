@@ -16,6 +16,13 @@
       as="style"
     />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+    <title>
+      KiwiLabs - Create Custom AI Models for Your Business at Unbeatable Prices
+    </title>
+
     <!-- Core CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -165,6 +172,15 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"
     ></script>
+
+    <script>
+      function scrollTo(yPosition){
+        window.scrollTo({
+          top: yPosition,
+          behavior: 'smooth'
+        });
+      }
+    </script>
 
     <!-- Optimized Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -404,32 +420,27 @@
           <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-8">
             <a
-              href="#"
+              href="#hero"
               class="hover:text-green-400 transition-colors duration-300"
               >Home</a
             >
             <a
-              href="#"
+              href="#features"
               class="hover:text-green-400 transition-colors duration-300"
               >Services</a
             >
             <a
-              href="#"
+              href="#portfolio"
               class="hover:text-green-400 transition-colors duration-300"
               >Models</a
             >
             <a
-              href="#"
-              class="hover:text-green-400 transition-colors duration-300"
-              >Pricing</a
-            >
-            <a
-              href="#"
+              href="#contact"
               class="hover:text-green-400 transition-colors duration-300"
               >Contact</a
             >
             <a
-              href="#"
+              href="#contact"
               class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-300"
               >Get Started</a
             >
@@ -465,32 +476,27 @@
         >
           <div class="flex flex-col space-y-4">
             <a
-              href="#"
+              href="#hero"
               class="hover:text-green-400 transition-colors duration-300"
               >Home</a
             >
             <a
-              href="#"
+              href="#features"
               class="hover:text-green-400 transition-colors duration-300"
               >Services</a
             >
             <a
-              href="#"
+              href="#portfolio"
               class="hover:text-green-400 transition-colors duration-300"
               >Models</a
             >
             <a
-              href="#"
-              class="hover:text-green-400 transition-colors duration-300"
-              >Pricing</a
-            >
-            <a
-              href="#"
+              href="#contact"
               class="hover:text-green-400 transition-colors duration-300"
               >Contact</a
             >
             <a
-              href="#"
+              href="#contact"
               class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-300 text-center"
               >Get Started</a
             >
@@ -530,60 +536,29 @@
             </h1>
             <p class="text-xl text-gray-300">
               Transform your business with personalized AI models and agents.
-              Cut costs by 50% and accelerate timelines by 40-50%. Starting at
-              just $499.
+              Cut costs by 50% and accelerate timelines by 40-50%.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a
-                href="#"
+                href="#contact"
                 class="bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors duration-300 text-center animate__animated animate__pulse animate__infinite"
               >
                 Get Started Now
               </a>
               <a
-                href="#"
+                href="#contact"
                 class="border border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 text-center"
               >
                 View Demo Models
               </a>
-            </div>
-            <div class="flex items-center gap-6 text-sm">
-              <div class="flex items-center gap-2">
-                <svg
-                  class="w-5 h-5 text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span>50% Cost Reduction</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <svg
-                  class="w-5 h-5 text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span>40-50% Faster Delivery</span>
-              </div>
             </div>
           </div>
           <div class="relative animate__animated animate__fadeInRight">
             <div
               class="absolute -inset-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg blur opacity-75 animate__animated animate__pulse animate__infinite"
             ></div>
-            <div class="relative bg-gray-800 p-8 rounded-lg shadow-xl">
-              <div class="space-y-6">
+            <div class="relative bg-gray-800 p-5 rounded-lg shadow-xl">
+              <!-- <div class="space-y-6">
                 <div class="flex items-center justify-between">
                   <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -601,7 +576,12 @@
                   <div class="h-4 bg-gray-700 rounded w-2/3"></div>
                   <div class="h-4 bg-gray-700 rounded w-3/4"></div>
                 </div>
-              </div>
+              </div> -->
+              <img
+                src="/hero.jpg"
+                alt="AI Model"
+                class="h-[10%] w-full rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -625,6 +605,7 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-12">
+          
           <!-- Feature 1 -->
           <div
             class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
@@ -722,11 +703,10 @@
               </svg>
             </div>
             <h3 class="text-2xl font-bold text-gray-800 mb-4">
-              Faster Timeline
+             Enhanced Decision-Making
             </h3>
             <p class="text-gray-600 mb-4">
-              Accelerate your project timelines by 40-50% with our efficient AI
-              implementation
+             AI analyzes data, identifies patterns, and predicts outcomes to support better business decisions
             </p>
             <ul class="space-y-2 text-gray-600">
               <li class="flex items-center">
@@ -741,7 +721,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                Rapid deployment
+              Trend Analysis
               </li>
               <li class="flex items-center">
                 <svg
@@ -755,7 +735,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                Quick iterations
+            Trend Analysis
               </li>
               <li class="flex items-center">
                 <svg
@@ -769,7 +749,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                Faster results
+         Data Insights
               </li>
             </ul>
           </div>
@@ -797,11 +777,10 @@
               </svg>
             </div>
             <h3 class="text-2xl font-bold text-gray-800 mb-4">
-              Custom Solutions
+              Personalized Customer Experience
             </h3>
             <p class="text-gray-600 mb-4">
-              Tailored AI models starting at just $499, making advanced AI
-              accessible for all businesses
+              AI delivers tailored experiences by analyzing customer preferences and predicting their needs
             </p>
             <ul class="space-y-2 text-gray-600">
               <li class="flex items-center">
@@ -816,7 +795,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                Personalized models
+                Tailored Offers
               </li>
               <li class="flex items-center">
                 <svg
@@ -830,7 +809,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                Flexible integration
+            Tailored Offers
               </li>
               <li class="flex items-center">
                 <svg
@@ -844,10 +823,197 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                Scalable solutions
+                Satisfaction Boost
               </li>
             </ul>
           </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mb-6"
+            >
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1"/><path d="M19 15V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V9"/><path d="M21 21v-2h-4"/><path d="M3 5h4V3"/><path d="M7 5a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1V3"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+           Optimized Marketing Strategies
+            </h3>
+            <p class="text-gray-600 mb-4">
+             AI enhances marketing through targeted campaigns and better consumer behavior understanding
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#ef4444"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Targeted Ads
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#ef4444"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Behavior Insights
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#ef4444"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                ROI Improvement
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-6"
+            >
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-function"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3"/><path d="M9 11.2h5.7"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Automates Repetitive Tasks
+            </h3>
+            <p class="text-gray-600 mb-4">
+              AI automates routine processes, increasing efficiency, reducing errors, and freeing up time for strategic activities
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#f97316"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Boost Efficiency
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#f97316"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Reduce Errors
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#f97316"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Save Time
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center mb-6"
+            >
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-arrow-up"><path d="M12 2a10 10 0 0 1 7.38 16.75"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/><path d="M2.5 8.875a10 10 0 0 0-.5 3"/><path d="M2.83 16a10 10 0 0 0 2.43 3.4"/><path d="M4.636 5.235a10 10 0 0 1 .891-.857"/><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Improved Supply Chain
+            </h3>
+            <p class="text-gray-600 mb-4">
+              AI streamlines supply chains by predicting demand, managing inventory, and optimizing routes
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#eab308"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+               Demand Forecasting
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#eab308"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+               Route Optimization
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 text-purple-500 mr-2"
+                  fill="#eab308"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Inventory Control
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1357,320 +1523,8 @@
       </div>
     </section>
   </div> </htmlCode
-><htmlCode>
-  <div id="root">
-    <section id="pricing" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-20">
-          <h2
-            class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn"
-          >
-            Affordable AI Solutions
-          </h2>
-          <p class="text-xl text-gray-600 animate__animated animate__fadeIn">
-            Choose the perfect plan for your business needs
-          </p>
-        </div>
+>
 
-        <div
-          class="grid lg:grid-cols-3 gap-8 animate__animated animate__fadeInUp"
-        >
-          <!-- Basic Plan -->
-          <div
-            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1"
-          >
-            <div class="p-8">
-              <h3 class="text-2xl font-bold text-gray-800 mb-4">Starter</h3>
-              <div class="flex items-baseline mb-8">
-                <span class="text-4xl font-bold text-gray-800">$499</span>
-                <span class="text-gray-500 ml-2">/model</span>
-              </div>
-              <ul class="space-y-4 mb-8">
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Basic AI Model
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  2 Weeks Delivery
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Basic Integration
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Email Support
-                </li>
-              </ul>
-              <button
-                class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300"
-              >
-                Get Started
-              </button>
-            </div>
-          </div>
-
-          <!-- Professional Plan -->
-          <div
-            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 relative"
-          >
-            <div
-              class="absolute top-0 right-0 bg-green-500 text-white px-4 py-1 rounded-bl-lg"
-            >
-              Popular
-            </div>
-            <div class="p-8">
-              <h3 class="text-2xl font-bold text-gray-800 mb-4">
-                Professional
-              </h3>
-              <div class="flex items-baseline mb-8">
-                <span class="text-4xl font-bold text-gray-800">$999</span>
-                <span class="text-gray-500 ml-2">/model</span>
-              </div>
-              <ul class="space-y-4 mb-8">
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Advanced AI Model
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  1 Week Delivery
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Full Integration
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  24/7 Priority Support
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Custom Features
-                </li>
-              </ul>
-              <button
-                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors duration-300"
-              >
-                Get Started
-              </button>
-            </div>
-          </div>
-
-          <!-- Enterprise Plan -->
-          <div
-            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1"
-          >
-            <div class="p-8">
-              <h3 class="text-2xl font-bold text-gray-800 mb-4">Enterprise</h3>
-              <div class="flex items-baseline mb-8">
-                <span class="text-4xl font-bold text-gray-800">Custom</span>
-              </div>
-              <ul class="space-y-4 mb-8">
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Multiple AI Models
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Custom Timeline
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Enterprise Integration
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Dedicated Support Team
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="w-5 h-5 text-green-500 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Custom Development
-                </li>
-              </ul>
-              <button
-                class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300"
-              >
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="mt-16 text-center bg-white p-8 rounded-2xl shadow-lg animate__animated animate__fadeIn"
-        >
-          <h3 class="text-2xl font-bold text-gray-800 mb-4">
-            Need a Custom Solution?
-          </h3>
-          <p class="text-gray-600 mb-8">
-            Contact us for custom pricing and features tailored to your specific
-            needs
-          </p>
-          <button
-            class="bg-green-500 text-white py-3 px-8 rounded-lg hover:bg-green-600 transition-colors duration-300 inline-flex items-center"
-          >
-            <span>Schedule Consultation</span>
-            <svg
-              class="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-  </div> </htmlCode
-><htmlCode>
   <div id="root">
     <section id="testimonials" class="py-20 bg-gray-900 text-white">
       <div class="container mx-auto px-6">
@@ -2038,38 +1892,6 @@
               Transforming businesses with affordable AI solutions that drive
               efficiency and growth.
             </p>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-            </div>
           </div>
 
           <!-- Quick Links -->
@@ -2078,35 +1900,28 @@
             <ul class="space-y-4">
               <li>
                 <a
-                  href="#"
+                  href="#hero"
                   class="hover:text-white transition-colors duration-300"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
-                  class="hover:text-white transition-colors duration-300"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="#services"
                   class="hover:text-white transition-colors duration-300"
                   >Services</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#portfolio"
                   class="hover:text-white transition-colors duration-300"
                   >Portfolio</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#contact"
                   class="hover:text-white transition-colors duration-300"
                   >Contact</a
                 >
@@ -2120,35 +1935,35 @@
             <ul class="space-y-4">
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   class="hover:text-white transition-colors duration-300"
                   >Custom AI Models</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   class="hover:text-white transition-colors duration-300"
                   >AI Agents</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   class="hover:text-white transition-colors duration-300"
                   >Integration Services</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   class="hover:text-white transition-colors duration-300"
                   >Consulting</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   class="hover:text-white transition-colors duration-300"
                   >Support</a
                 >
@@ -2181,22 +1996,17 @@
 
         <div class="border-t border-gray-800 mt-12 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm">© 2024 KiwiLabs. All rights reserved.</p>
+            <p class="text-sm">© 2025 KiwiLabs. All rights reserved.</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
               <a
-                href="#"
+                href="/privacy-policy.html"
                 class="text-sm hover:text-white transition-colors duration-300"
                 >Privacy Policy</a
               >
               <a
-                href="#"
+                href="/terms-of-service.html"
                 class="text-sm hover:text-white transition-colors duration-300"
                 >Terms of Service</a
-              >
-              <a
-                href="#"
-                class="text-sm hover:text-white transition-colors duration-300"
-                >Cookie Policy</a
               >
             </div>
           </div>
