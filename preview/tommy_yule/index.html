@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>Tommy Yule - Preview</title>
+      <!-- SEO Description -->
+      <meta name="description" content="Tommy Yule - Preview">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="a52863f0-06a1-4ec8-acb6-d1eb96eb4eb0" data-section-id="a52863f0-06a1-4ec8-acb6-d1eb96eb4eb0">
+
+<htmlCode>
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#hero" class="text-white font-bold text-2xl">TOMMY YULE</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+            <a href="#program" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Program</a>
+            <a href="#transformations" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Results</a>
+            <a href="#process" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Process</a>
+            <a href="#apply" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-neutral-800 focus:outline-none">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-neutral-900">
+        <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#program" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Program</a>
+        <a href="#transformations" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Results</a>
+        <a href="#process" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Process</a>
+        <a href="#apply" class="bg-red-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Handle smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+          // Close mobile menu after clicking a link
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="96161884-8ca4-4ffd-b87d-de0e5cd6b021" data-section-id="96161884-8ca4-4ffd-b87d-de0e5cd6b021">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="min-h-[70vh] bg-neutral-900 relative flex items-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-neutral-900/90 to-neutral-900/70 z-10"></div>
+    
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute inset-0 bg-[url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx0cHBwcHy4lJSAmKT0xMC0nLS4wMTQ4ODg4MTQ5OTUrPT09ODxFS0xLTlNsfXV9o8L/2wBDARUXFygdIR0hQTU0LzQ1NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Njb/wAARCACWAJYDASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAMEAgEGBf/EABoQAQEBAQEBAQAAAAAAAAAAAAACAQMREjH/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QAGhEBAQEBAQEBAAAAAAAAAAAAAAECEQMSIf/aAAwDAQACEQMRAD8A9SNjY2eJ0djY2MEdjY2MEdjY2MEdjY2MEdjY2MEdjY2MEdjY2MEdjY2MEcmxkYJkzVyZokSTNXJnRJkmaqTPSXJSScqSypJnrzGxkbPE6OxsbGCOxsbGCOxsbGCOxsbGCOxsbGCOxsbGCOxsbGCOTY+MEyZq5M0RJM1cmadkiSZq5M9JclJJypLKkmc+oxsbGzxOjsbGxgjsbGxgjsbGxgjsbGxgjsbGxgjsbGxgjk2PjBMmanPPRGSJz1UnnoWSJz1UnnotkXJOVJZ6KTOfUY2NmXnR2NjYwR2NjYwR2NjYwR2NjYwR2NjYwR2bHxgRE5656IyROeqk89CyROeqk89C2Rck5UlnopM49NjY2eJ0djY2MEdjY2MEdjY2MEdjY2MEcmx8YEGhESFZ56FkREVZ56FkROeqk89C2Rck5UlnopM49NjY2eJ0djY2MEdjY2MEcmx8YEGhBoQaEGhETnqpPPQskTnqrPPQtiTlSWeikzj02NjZ4nR2NjYwRybHxgQaEGhBoQaEGhBoRE56qTz0LYk56qzz0LYiUqSz0Umc+mxsbPE6OTYyMCDQg0INCDQg0INCDQiM89VZ56FsSc9VZ56EsSZUpLPRSZz6bGxs8To5NjIwINCDQg0INCDQg0INCInPVSeehbEnKks9C2JMqUlnoSZl6bGxs8To//9k=')]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20">
+
+      <div class="flex flex-row items-end justify-between gap-y-5 flex-wrap md:flex-nowrap">
+      <div class="flex flex-col items-start space-y-8 mt-20">
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight animate__animated animate__fadeInUp">
+          1% Better Every Day
+          <span class="block text-red-500">Elite-Level Physique & Mindset</span>
+        </h1>
+        
+        <p class="text-xl text-gray-300 max-w-2xl animate__animated animate__fadeInUp animate__delay-1s">
+          Transform your body and mind with data-driven, personalized coaching that delivers sustainable results.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="#apply" class="px-8 py-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors inline-flex items-center group">
+            Apply for Coaching
+            <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+          <p class="text-red-500 font-semibold flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            Limited Spaces Available
+          </p>
+        </div>
+        </div>
+     
+          
+        <img src="/preview/tommy_yule/pp.png" alt="Tommy Yule" class="w-96 h-96 rounded-3xl shadow-lg animate__animated animate__fadeInRight animate__delay-2s">
+</div>
+
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-white opacity-75 hover:opacity-100 transition-opacity">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="382e1ed7-d89a-49ec-9d75-54ef0684ff1f" data-section-id="382e1ed7-d89a-49ec-9d75-54ef0684ff1f">
+
+<htmlCode>
+<div id="root">
+  <section id="about" class="py-24 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 animate__animated animate__fadeInLeft">
+          <h2 class="text-4xl font-bold text-neutral-900">
+            Meet Your Coach
+            <span class="block text-red-600">Tommy Yule</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <p class="text-neutral-700 text-lg">
+              With over 2 years of dedicated experience transforming high-performing individuals, I specialize in creating sustainable, science-backed programs that deliver elite-level results.
+            </p>
+            
+            <p class="text-neutral-700 text-lg">
+              My coaching philosophy centers on three core principles: sustainability, adherence, and data-driven progress. I believe in building lasting habits that transform not just your physique, but your entire lifestyle.
+            </p>
+          </div>
+
+          <div class="border-l-4 border-red-600 pl-4 bg-white p-6 rounded-lg shadow-md">
+            <p class="text-neutral-700 italic">
+              "Through my own transformation journey and years of coaching experience, I've developed a proven system that combines cutting-edge training methods with practical, sustainable nutrition strategies."
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex items-center space-x-2">
+              <div class="bg-red-600 p-2 rounded-full">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <span class="font-bold text-lg">100+ Transformations</span>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+              <div class="bg-red-600 p-2 rounded-full">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <span class="font-bold text-lg">2+ Years Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative animate__animated animate__fadeInRight">
+          <div class="bg-neutral-900 rounded-lg p-8 relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-6">Featured Success Story: Dan's Journey</h3>
+            <div class="space-y-4 text-gray-300">
+              <p>✓ 2-year complete lifestyle transformation</p>
+              <p>✓ Sustainable fat loss while building muscle</p>
+              <p>✓ Developed lasting nutrition & training habits</p>
+              <p>✓ Achieved work-life-fitness balance</p>
+            </div>
+            <a href="#transformations" class="inline-flex items-center text-red-500 font-semibold mt-6 hover:text-red-400 transition-colors">
+              See More Transformations
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div class="absolute inset-0 bg-red-600 rounded-lg transform translate-x-2 translate-y-2 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="55cc717d-f2c5-4d02-938f-b63fadf51323" data-section-id="55cc717d-f2c5-4d02-938f-b63fadf51323">
+
+<htmlCode>
+<div id="root">
+  <section id="program" class="py-24 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeInUp">
+        <h2 class="text-4xl font-bold mb-4">Elite Coaching Program</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">A comprehensive, data-driven approach designed for those serious about achieving exceptional results.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-neutral-800 p-8 rounded-lg transform hover:-translate-y-1 transition-transform animate__animated animate__fadeInUp">
+          <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Personalized Plans</h3>
+          <p class="text-gray-400">Custom nutrition and training programs tailored to your goals and lifestyle.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-8 rounded-lg transform hover:-translate-y-1 transition-transform animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Weekly Video Feedback</h3>
+          <p class="text-gray-400">Detailed form analysis and phase planning to optimize your progress.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-8 rounded-lg transform hover:-translate-y-1 transition-transform animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Daily Support</h3>
+          <p class="text-gray-400">Direct WhatsApp access for guidance and accountability.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-8 rounded-lg transform hover:-translate-y-1 transition-transform animate__animated animate__fadeInUp">
+          <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Exercise Library</h3>
+          <p class="text-gray-400">Full access to detailed exercise tutorials and form guides.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-8 rounded-lg transform hover:-translate-y-1 transition-transform animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Progress Reviews</h3>
+          <p class="text-gray-400">12-week comprehensive progress assessments and goal updates.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-8 rounded-lg transform hover:-translate-y-1 transition-transform animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Data-Driven Results</h3>
+          <p class="text-gray-400">Weekly program adjustments based on detailed progress metrics.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-16 animate__animated animate__fadeInUp">
+        <a href="#apply" class="inline-flex items-center px-8 py-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors group">
+          Apply Now - Work With Tommy Today
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="17f9fa9b-a09f-481a-aa44-807fcaa8b513" data-section-id="17f9fa9b-a09f-481a-aa44-807fcaa8b513">
+
+<htmlCode>
+<div id="root">
+  <section id="transformations" class="py-24 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeInUp">
+        <h2 class="text-4xl font-bold mb-4">Real Results, Real People</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Transformations that showcase not just physical changes, but complete lifestyle shifts.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <!-- Jack's Story -->
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden animate__animated animate__fadeInLeft">
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold">Jack's 16-Week Cut</h3>
+              <span class="bg-red-600 text-white px-4 py-1 rounded-full text-sm">16 Weeks</span>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-600">Jack achieved remarkable fat loss while maintaining muscle mass through structured nutrition and progressive training.</p>
+              <ul class="space-y-2">
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  15kg fat loss while maintaining strength
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Improved energy levels and performance
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Sustainable nutrition habits established
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dan's Story -->
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden animate__animated animate__fadeInRight">
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold">Dan's Complete Transformation</h3>
+              <span class="bg-red-600 text-white px-4 py-1 rounded-full text-sm">2 Years</span>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-600">Dan's journey represents the pinnacle of long-term commitment and sustainable transformation.</p>
+              <ul class="space-y-2">
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Complete physique transformation
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Lifestyle and mindset overhaul
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Maintained results long-term
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Carousel -->
+      <div class="relative bg-neutral-900 rounded-2xl p-8 md:p-12 animate__animated animate__fadeInUp">
+        <div class="testimonials-carousel">
+          <div class="testimonial-slide">
+            <div class="max-w-3xl mx-auto text-center">
+              <p class="text-xl md:text-2xl text-white mb-8">"Tommy's approach to coaching changed my entire perspective on fitness. The results speak for themselves, but it's the knowledge and habits I've gained that are truly priceless."</p>
+              <div class="flex items-center justify-center">
+                <div class="text-center">
+                  <p class="font-bold text-white">Jack Matthews</p>
+                  <p class="text-gray-400">16-Week Transformation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="#apply" class="inline-flex items-center px-8 py-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors group">
+          Start Your Transformation
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simple testimonials carousel
+    const testimonials = [
+      {
+        quote: "Tommy's approach to coaching changed my entire perspective on fitness. The results speak for themselves, but it's the knowledge and habits I've gained that are truly priceless.",
+        name: "Jack Matthews",
+        title: "16-Week Transformation"
+      },
+      {
+        quote: "The data-driven approach and constant support made all the difference. I've tried other coaches before, but Tommy's methods are in a league of their own.",
+        name: "Dan Peterson",
+        title: "2-Year Transformation"
+      }
+    ];
+
+    let currentTestimonial = 0;
+    const testimonialSlide = document.querySelector('.testimonial-slide');
+
+    function updateTestimonial() {
+      const testimonial = testimonials[currentTestimonial];
+      testimonialSlide.innerHTML = `
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-xl md:text-2xl text-white mb-8">"${testimonial.quote}"</p>
+          <div class="flex items-center justify-center">
+            <div class="text-center">
+              <p class="font-bold text-white">${testimonial.name}</p>
+              <p class="text-gray-400">${testimonial.title}</p>
+            </div>
+          </div>
+        </div>
+      `;
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    }
+
+    setInterval(updateTestimonial, 5000);
+  </script>
+</div>
+</htmlCode></element><element id="4cddb14e-3f69-4d73-b4d7-421cc6a5649a" data-section-id="4cddb14e-3f69-4d73-b4d7-421cc6a5649a">
+
+<htmlCode>
+<div id="root">
+  <section id="process" class="py-24 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4 animate__animated animate__fadeInUp">The Process</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">A systematic approach to achieving your elite-level physique goals</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="relative animate__animated animate__fadeInUp">
+          <div class="bg-neutral-800 rounded-lg p-8 h-full hover:transform hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-4 -left-4 bg-red-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+              1
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 mt-4">Apply for Coaching</h3>
+            <p class="text-gray-400">Complete a detailed assessment of your goals, experience, and commitment level to begin your journey.</p>
+            <div class="mt-6">
+              <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="bg-neutral-800 rounded-lg p-8 h-full hover:transform hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-4 -left-4 bg-red-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+              2
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 mt-4">Consultation & Planning</h3>
+            <p class="text-gray-400">In-depth strategy session to create your personalized roadmap for success.</p>
+            <div class="mt-6">
+              <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="bg-neutral-800 rounded-lg p-8 h-full hover:transform hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-4 -left-4 bg-red-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+              3
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 mt-4">Execution & Support</h3>
+            <p class="text-gray-400">Full accountability and daily support to ensure adherence and progress.</p>
+            <div class="mt-6">
+              <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="bg-neutral-800 rounded-lg p-8 h-full hover:transform hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-4 -left-4 bg-red-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+              4
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 mt-4">Weekly Adjustments</h3>
+            <p class="text-gray-400">Data-driven program modifications to optimize your results week after week.</p>
+            <div class="mt-6">
+              <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center animate__animated animate__fadeInUp">
+        <div class="inline-block bg-neutral-800 rounded-lg p-8">
+          <h3 class="text-2xl font-bold text-white mb-4">Ready to Transform?</h3>
+          <p class="text-gray-400 mb-6">Take the first step towards your elite-level physique</p>
+          <a href="#apply" class="inline-flex items-center px-8 py-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors group">
+            Start Your Journey
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="35ced573-368a-46c9-ad10-240c34dc5e80" data-section-id="35ced573-368a-46c9-ad10-240c34dc5e80">
+
+<htmlCode>
+<div id="root">
+  <section id="philosophy" class="py-24 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-4xl font-bold mb-6">Data-Driven Coaching Philosophy</h2>
+          <p class="text-xl text-gray-600 mb-8">Success in fitness isn't about random approaches – it's about precision, accountability, and measurable progress.</p>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-start">
+                <div class="bg-red-600 p-2 rounded-full mr-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold mb-2">Daily Check-ins & Biofeedback</h3>
+                  <p class="text-gray-600">Continuous monitoring of key metrics enables precise program adjustments for optimal results.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-start">
+                <div class="bg-red-600 p-2 rounded-full mr-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold mb-2">Accountability & Honesty</h3>
+                  <p class="text-gray-600">Real progress comes from transparent communication and consistent execution.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-900 rounded-2xl p-8 animate__animated animate__fadeInRight">
+          <h3 class="text-2xl font-bold text-white mb-6">The Power of Data</h3>
+          
+          <div class="space-y-6">
+            <div class="bg-neutral-800 p-6 rounded-lg">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-white font-bold">Progress Tracking</span>
+                <span class="text-red-500 font-bold">100%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-red-600 h-2 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div class="bg-neutral-800 p-6 rounded-lg">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-white font-bold">Program Adherence</span>
+                <span class="text-red-500 font-bold">95%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-red-600 h-2 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div class="bg-neutral-800 p-6 rounded-lg">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-white font-bold">Client Success Rate</span>
+                <span class="text-red-500 font-bold">98%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-red-600 h-2 rounded-full" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#apply" class="inline-flex items-center px-6 py-3 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors group">
+              Experience the Difference
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="757ca8b1-d64a-4b27-9abe-ed8995dbb082" data-section-id="757ca8b1-d64a-4b27-9abe-ed8995dbb082">
+
+<htmlCode>
+<div id="root">
+  <section id="apply" class="py-24 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeInUp">
+        <h2 class="text-4xl font-bold text-white mb-4">Apply for Coaching</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Ready to transform your physique and mindset? Take the first step today.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <form id="coaching-form" class="space-y-8 animate__animated animate__fadeInUp">
+          <div class="bg-neutral-800 p-8 rounded-lg shadow-xl">
+            <!-- Personal Information -->
+            <div class="space-y-6 mb-8">
+              <div>
+                <label for="name" class="block text-white font-medium mb-2">Full Name</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+
+              <div>
+                <label for="email" class="block text-white font-medium mb-2">Email Address</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+
+              <div>
+                <label for="phone" class="block text-white font-medium mb-2">Phone Number (WhatsApp)</label>
+                <input type="tel" id="phone" name="phone" required
+                  class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+            </div>
+
+            <!-- Goals & Experience -->
+            <div class="space-y-6 mb-8">
+              <div>
+                <label for="goals" class="block text-white font-medium mb-2">Primary Fitness Goals</label>
+                <textarea id="goals" name="goals" rows="3" required
+                  class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-white font-medium mb-2">Training Experience Level</label>
+                <select name="experience" required
+                  class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+                  <option value="">Select your experience level</option>
+                  <option value="beginner">Beginner (0-1 years)</option>
+                  <option value="intermediate">Intermediate (1-3 years)</option>
+                  <option value="advanced">Advanced (3+ years)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Commitment Level -->
+            <div class="space-y-4 mb-8">
+              <label class="block text-white font-medium mb-2">Commitment Level</label>
+              <div class="space-y-2">
+                <label class="flex items-center text-gray-300">
+                  <input type="radio" name="commitment" value="high" required
+                    class="mr-2 text-red-600 focus:ring-red-600">
+                  Fully committed to following the program
+                </label>
+                <label class="flex items-center text-gray-300">
+                  <input type="radio" name="commitment" value="medium" required
+                    class="mr-2 text-red-600 focus:ring-red-600">
+                  Willing to make significant lifestyle changes
+                </label>
+                <label class="flex items-center text-gray-300">
+                  <input type="radio" name="commitment" value="low" required
+                    class="mr-2 text-red-600 focus:ring-red-600">
+                  Interested but unsure about commitment level
+                </label>
+              </div>
+            </div>
+
+            <button type="submit"
+              class="w-full py-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors flex items-center justify-center group">
+              Submit Application
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('coaching-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add form submission logic here
+      alert('Thank you for your application! We will contact you shortly.');
+    });
+  </script>
+</div>
+</htmlCode></element><element id="18d06315-cffa-4d94-b695-a56d5304233a" data-section-id="18d06315-cffa-4d94-b695-a56d5304233a">
+
+<htmlCode>
+<div id="root">
+  <section id="contact" class="py-24 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
+          <p class="text-xl text-gray-600 mb-8">Ready to start your transformation journey? Reach out through any of these channels.</p>
+
+          <div class="space-y-6">
+            <div class="flex items-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="bg-red-600 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Instagram</h3>
+                <a href="https://instagram.com/tommyyule" target="_blank" class="text-red-600 hover:text-red-700 transition-colors">@tommyyule</a>
+              </div>
+            </div>
+
+            <div class="flex items-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="bg-red-600 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">WhatsApp</h3>
+                <p class="text-gray-600">DM 'TRANSFORM' to start your journey</p>
+              </div>
+            </div>
+
+            <div class="bg-neutral-900 p-8 rounded-lg text-white">
+              <h3 class="text-xl font-bold mb-4">Quick Response Guarantee</h3>
+              <p class="text-gray-300 mb-6">I personally respond to all messages within 24 hours to ensure you get started on your journey as soon as possible.</p>
+              <div class="flex items-center text-red-500">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-semibold">24hr Response Time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Contact Form -->
+        <div class="animate__animated animate__fadeInRight">
+          <div class="bg-neutral-900 p-8 rounded-lg">
+            <h3 class="text-2xl font-bold text-white mb-6">Quick Message</h3>
+            <form class="space-y-6">
+              <div>
+                <input type="text" placeholder="Your Name" 
+                  class="w-full px-4 py-3 bg-neutral-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+              <div>
+                <input type="email" placeholder="Your Email" 
+                  class="w-full px-4 py-3 bg-neutral-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+              <div>
+                <textarea rows="4" placeholder="Your Message" 
+                  class="w-full px-4 py-3 bg-neutral-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+              </div>
+              <button type="submit" 
+                class="w-full py-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors flex items-center justify-center group">
+                Send Message
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="90ce210c-c629-422c-9855-45e1670a1164" data-section-id="90ce210c-c629-422c-9855-45e1670a1164">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Brand -->
+        <div class="col-span-1 md:col-span-2">
+          <h3 class="text-2xl font-bold mb-4">TOMMY YULE</h3>
+          <p class="text-gray-400 mb-4">Elite-Level Physique & Performance Coach</p>
+          <div class="flex space-x-4">
+            <a href="https://instagram.com/tommyyule" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/your-number" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+            <li><a href="#program" class="text-gray-400 hover:text-white transition-colors">Program</a></li>
+            <li><a href="#transformations" class="text-gray-400 hover:text-white transition-colors">Results</a></li>
+            <li><a href="#apply" class="text-gray-400 hover:text-white transition-colors">Apply Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400">DM "TRANSFORM" to start</li>
+            <li><a href="#contact" class="text-red-500 hover:text-red-400 transition-colors">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-neutral-800 pt-8 mt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm">&copy; 2025 Tommy Yule. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition-colors opacity-0 invisible">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script>
+    // Back to Top Button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+        backToTopButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
