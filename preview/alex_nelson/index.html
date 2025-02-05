@@ -1,0 +1,1021 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>Dr Alex Nelson - Preview</title>
+      <!-- SEO Description -->
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+             fontFamily: {
+  sans: ['{{settings.fonts.primary}}', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+  heading: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+},
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col font-[Inter]">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="fd6409cc-e548-4a5f-a29a-29fbe0879716" data-section-id="fd6409cc-e548-4a5f-a29a-29fbe0879716">
+
+
+                
+                
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-hsyv82ew">
+  <div class="flex items-center justify-between h-16">
+    <!-- Logo -->
+    <div class="flex-shrink-0 font-bold text-2xl">
+      <a href="#" class="text-[#0066CC]">Dr. Alex Nelson</a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block">
+      <ul class="ml-10 flex items-baseline space-x-4">
+        <li><a href="#hero" class="text-gray-700 hover:text-[#FF6600] px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+        <li><a href="#expertise" class="text-gray-700 hover:text-[#FF6600] px-3 py-2 rounded-md text-sm font-medium">Expertise</a></li>
+        <li><a href="#publications" class="text-gray-700 hover:text-[#FF6600] px-3 py-2 rounded-md text-sm font-medium">Publications</a></li>
+        <li><a href="#research" class="text-gray-700 hover:text-[#FF6600] px-3 py-2 rounded-md text-sm font-medium">Research</a></li>
+        <li><a href="#contact" class="text-gray-700 hover:text-[#FF6600] px-3 py-2 rounded-md text-sm font-medium">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md hover:text-[#FF6600] hover:bg-neutral-800 focus:outline-none" aria-label="Toggle menu">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-900">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3" id="el-fjo2fqej">
+        Menu will come here
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking a link
+      const mobileLinks = mobileMenu.getElementsByTagName('a');
+      Array.from(mobileLinks).forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+
+      // Add scroll event listener for navbar background
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 0) {
+          navbar.classList.add('bg-opacity-95', 'backdrop-blur-sm');
+        } else {
+          navbar.classList.remove('bg-opacity-95', 'backdrop-blur-sm');
+        }
+      });
+    });
+  </script>
+</div>
+
+              
+              </element><element id="a9973745-ef6b-42f2-8e55-60e7f853a6a2" data-section-id="a9973745-ef6b-42f2-8e55-60e7f853a6a2">
+
+
+<div id="root">
+  <section id="hero" class="relative min-h-[70vh] bg-neutral-900 flex items-center justify-center overflow-hidden">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/90 to-neutral-900/70 z-10"></div>
+    
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,102,204,0.3),transparent_50%)]"></div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="flex flex-row justify-between items-center flex-wrap">
+      <div class="container mx-auto px-4 relative z-20 py-20 mt-16">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate__animated animate__fadeInDown">
+          Overcome Tendon Pain, Hit PRs, <span class="text-[#FF6600]">Dominate Your Sport!</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 mb-8 animate__animated animate__fadeInUp animate__delay-1s">
+          Stop guessing, start progressing. Rehab your tendons the right way and get back to the activities you love.
+        </p>
+        
+        <div class="animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="#program" 
+             class="inline-block bg-[#0066CC] hover:bg-[#0055aa] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#0066CC]/50">
+            Join the Training with Tendinopathy Team
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <img src="/preview/alex_nelson/pp.png" 
+         class="w-full h-1/2 ">
+
+
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="absolute bottom-0 left-0 w-full">
+      <svg class="w-full h-24 fill-neutral-800" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,74L1392,74C1344,74,1248,74,1152,74C1056,74,960,74,864,74C768,74,672,74,576,74C480,74,384,74,288,74C192,74,96,74,48,74L0,74Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll functionality
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Parallax effect on scroll
+      window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('#hero');
+        if (hero) {
+          hero.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+        }
+      });
+    });
+  </script>
+</div>
+</element><element id="76582bef-4e19-4e05-ac5d-d378f196b359" data-section-id="76582bef-4e19-4e05-ac5d-d378f196b359">
+
+
+<div id="root">
+  <section id="education" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-4xl font-bold text-neutral-900 mb-4">What is Tendinopathy?</h2>
+          <div class="w-24 h-1 bg-[#0066CC] mx-auto mb-8"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left Column -->
+          <div class="space-y-8 animate__animated animate__fadeInLeft">
+            <div class="bg-neutral-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 class="text-2xl font-semibold text-neutral-900 mb-4">Understanding Tendinopathy</h3>
+              <p class="text-neutral-700 leading-relaxed">
+                You've probably heard of tendinitis—but did you know that's an outdated term? Tendinopathy is the real issue, and it's not just inflammation. It requires proper loading and rehab strategies, not just rest and medication.
+              </p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 class="text-2xl font-semibold text-neutral-900 mb-4">Why Traditional Rehab Fails</h3>
+              <p class="text-neutral-700 leading-relaxed">
+                Most rehab plans focus on rest, anti-inflammatory treatments, and light band exercises that don't truly address the problem. This leads to a frustrating cycle of pain and setbacks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="animate__animated animate__fadeInRight">
+            <div class="bg-[#0066CC] text-white rounded-xl p-8">
+              <h3 class="text-2xl font-semibold mb-6">Common Conditions We Treat</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <div class="p-3 bg-white/10 rounded-lg">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                    </svg>
+                  </div>
+                  <span class="font-medium">Jumper's Knee</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div class="p-3 bg-white/10 rounded-lg">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                    </svg>
+                  </div>
+                  <span class="font-medium">Golfer/Tennis Elbow</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div class="p-3 bg-white/10 rounded-lg">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                    </svg>
+                  </div>
+                  <span class="font-medium">Runner's Heel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-16 animate__animated animate__fadeInUp">
+          <a href="#program" class="inline-block bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#FF6600]/50">
+            Learn How We Can Help You
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="8327dfc0-459a-448a-bb0d-60e3684d0996" data-section-id="8327dfc0-459a-448a-bb0d-60e3684d0996">
+
+
+<div id="root">
+  <section id="program" class="py-20 bg-neutral-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-4xl font-bold mb-4">Join the Training with Tendinopathy Team</h2>
+          <div class="w-24 h-1 bg-[#FF6600] mx-auto mb-8"></div>
+        </div>
+
+        <!-- Why It Works -->
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            "We focus on progressive loading, proper rehab principles, and real-world applications tailored to your sport and goals."
+          </p>
+        </div>
+
+        <!-- Program Features Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <!-- Feature 1 -->
+          <div class="bg-neutral-800 rounded-xl p-6 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp">
+            <div class="text-[#0066CC] mb-4">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zm5.99 7.176A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Step-by-Step Plans</h3>
+            <p class="text-gray-400">Custom rehab plans for beginner, intermediate, and advanced levels</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-neutral-800 rounded-xl p-6 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+            <div class="text-[#0066CC] mb-4">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Video Demonstrations</h3>
+            <p class="text-gray-400">Clear exercise demonstrations with proper form guidance</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-neutral-800 rounded-xl p-6 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+            <div class="text-[#0066CC] mb-4">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3.5 2.5a2 2 0 00-2 2v12a2 2 0 002 2h13a2 2 0 002-2v-12a2 2 0 00-2-2h-13zm5.5 9a1 1 0 100 2h6a1 1 0 100-2h-6z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Weekly Progressions</h3>
+            <p class="text-gray-400">Customized progressions based on pain tolerance and performance</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-neutral-800 rounded-xl p-6 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+            <div class="text-[#0066CC] mb-4">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Expert Support</h3>
+            <p class="text-gray-400">Direct access to a rehab specialist for questions and adjustments</p>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center animate__animated animate__fadeInUp">
+          <a href="#contact" class="inline-block bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#FF6600]/50">
+            Start Your Rehab Journey Today!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="4f84538e-ed3b-4981-be9b-793b7f16c08d" data-section-id="4f84538e-ed3b-4981-be9b-793b7f16c08d">
+
+
+<div id="root">
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-4xl font-bold text-neutral-900 mb-4">Athlete Success Stories</h2>
+          <div class="w-24 h-1 bg-[#0066CC] mx-auto"></div>
+        </div>
+
+        <!-- Featured Testimonial -->
+        <div class="bg-neutral-50 rounded-2xl p-8 mb-16 shadow-xl animate__animated animate__fadeInUp">
+          <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="w-full md:w-1/3">
+              <div class="rounded-full bg-[#0066CC] text-white p-8 aspect-square flex items-center justify-center">
+                <h3 class="text-3xl font-bold">Brad's Story</h3>
+              </div>
+            </div>
+            <div class="w-full md:w-2/3">
+              <h3 class="text-2xl font-bold mb-4">From Frustration to Recovery</h3>
+              <p class="text-neutral-700 mb-4 text-lg italic">
+                "I felt stuck, unable to train how I wanted. After working through this program, I'm now back to squatting, deadlifting, and running pain-free!"
+              </p>
+              <p class="text-neutral-600">
+                "The biggest change was understanding pain and using it as a guide, rather than something to fear."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- More Testimonials Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-neutral-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+            <div class="text-[#FF6600] mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Powerlifter's Comeback</h3>
+            <p class="text-neutral-600">
+              "Back to hitting PRs in all three lifts. The progressive loading approach made all the difference."
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-neutral-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+            <div class="text-[#FF6600] mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Runner's Recovery</h3>
+            <p class="text-neutral-600">
+              "Increased my weekly mileage from 10 to 40 miles without knee pain. The program was a game-changer."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-neutral-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+            <div class="text-[#FF6600] mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Everyday Athlete</h3>
+            <p class="text-neutral-600">
+              "Finally got my confidence back in the gym. The structured approach helped me trust the process."
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16 animate__animated animate__fadeInUp">
+          <a href="#program" class="inline-block bg-[#0066CC] hover:bg-[#0055aa] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#0066CC]/50">
+            Join Their Success Story
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="7acdb64a-b5fc-4477-9c93-6db4e5dae583" data-section-id="7acdb64a-b5fc-4477-9c93-6db4e5dae583">
+
+
+<div id="root">
+  <section id="resources" class="py-20 bg-neutral-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-4xl font-bold text-white mb-4">Free Resource</h2>
+          <div class="w-24 h-1 bg-[#FF6600] mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="text-white animate__animated animate__fadeInLeft">
+            <h3 class="text-3xl font-bold mb-6">Get a Free Section of the Tendon Toolkit</h3>
+            <div class="bg-neutral-800 rounded-xl p-6 mb-8">
+              <h4 class="text-xl font-semibold mb-4 text-[#FF6600]">Education is Key:</h4>
+              <p class="text-gray-300 mb-4">
+                The 5 Most Important Things to Know During Rehab
+              </p>
+              <div class="flex items-center text-gray-400">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
+                </svg>
+                <span>11-minute video</span>
+              </div>
+            </div>
+            <p class="text-gray-300 text-lg mb-6">
+              Learn how to manage pain, structure rehab, and avoid common mistakes.
+            </p>
+          </div>
+
+          <!-- Right Form -->
+          <div class="bg-neutral-800 rounded-xl p-8 shadow-xl animate__animated animate__fadeInRight">
+            <form id="resourceForm" class="space-y-6">
+              <div>
+                <label for="name" class="block text-white mb-2">Name</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 rounded-lg bg-neutral-700 text-white border border-neutral-600 focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC] focus:ring-opacity-50 transition-colors duration-200"
+                  placeholder="Enter your name">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-white mb-2">Email</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 rounded-lg bg-neutral-700 text-white border border-neutral-600 focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC] focus:ring-opacity-50 transition-colors duration-200"
+                  placeholder="Enter your email">
+              </div>
+
+              <button type="submit"
+                class="w-full bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#FF6600]/50">
+                Send Me the Free Section!
+              </button>
+            </form>
+
+            <p class="text-gray-400 text-sm mt-4 text-center">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('resourceForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      
+      // Here you would typically send this data to your backend
+      console.log('Form submitted:', { name, email });
+      
+      // Show success message
+      alert('Thanks! Check your email for the free resource.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</div>
+</element><element id="faf4efc9-47e9-4a6d-9796-ee1c536ef1bb" data-section-id="faf4efc9-47e9-4a6d-9796-ee1c536ef1bb">
+
+<div id="root">
+  <section id="toolkit" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-4xl font-bold text-neutral-900 mb-4">The Tendon Toolkit</h2>
+          <div class="w-24 h-1 bg-[#0066CC] mx-auto mb-8"></div>
+          <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+            A comprehensive, evidence-based rehab course to help you fix your tendinopathy once and for all.
+          </p>
+        </div>
+
+        <!-- Course Content -->
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- Left Column - Course Sections -->
+          <div class="space-y-6 animate__animated animate__fadeInLeft">
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Anatomy, Physiology, and Clinical Aspects</h3>
+                <span class="text-neutral-500">~23 min</span>
+              </div>
+              <p class="text-neutral-600">Section 1: Foundation of Patellar Tendinopathy</p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Education is Key</h3>
+                <span class="text-neutral-500">~11 min</span>
+              </div>
+              <p class="text-neutral-600">Section 2: The 5 Most Important Things</p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Loading Principles</h3>
+                <span class="text-neutral-500">~26 min</span>
+              </div>
+              <p class="text-neutral-600">Section 3: Understanding Progressive Loading</p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Pain as a Guide</h3>
+                <span class="text-neutral-500">~45 min</span>
+              </div>
+              <p class="text-neutral-600">Section 4: How Hard to Train</p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Tempo Training</h3>
+                <span class="text-neutral-500">~24 min</span>
+              </div>
+              <p class="text-neutral-600">Section 5: Adjusting Based on Rehab Stages</p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Programming Fundamentals</h3>
+                <span class="text-neutral-500">~16 min</span>
+              </div>
+              <p class="text-neutral-600">Section 6: Volume, Frequency, and Specificity</p>
+            </div>
+
+            <div class="bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-semibold text-lg">Advanced Training</h3>
+                <span class="text-neutral-500">~23 min</span>
+              </div>
+              <p class="text-neutral-600">Section 7: Strength Training & Plyometric Integration</p>
+            </div>
+          </div>
+
+          <!-- Right Column - Pricing Card -->
+          <div class="bg-neutral-900 text-white rounded-2xl p-8 shadow-xl sticky top-24 animate__animated animate__fadeInRight">
+            <div class="text-center mb-8">
+              <h3 class="text-3xl font-bold mb-4">Complete Course Access</h3>
+              <div class="flex justify-center items-center">
+                <span class="text-5xl font-bold">$89</span>
+                <span class="ml-2 text-gray-400">one-time payment</span>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-[#FF6600] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                </svg>
+                <span>Lifetime access to all content</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-[#FF6600] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                </svg>
+                <span>168 minutes of video content</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-[#FF6600] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                </svg>
+                <span>Downloadable resources</span>
+              </div>
+            </div>
+
+            <button class="w-full bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#FF6600]/50">
+              Get the Full Course for $89 – Enroll Now!
+            </button>
+
+            <p class="text-center text-sm text-gray-400 mt-4">
+              100% Satisfaction Guaranteed
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div></element><element id="743202a5-e329-4742-8309-2036ec936da8" data-section-id="743202a5-e329-4742-8309-2036ec936da8">
+
+<div id="root">
+  <section id="contact" class="py-20 bg-neutral-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-4xl font-bold mb-4">Have Questions? Let's Connect!</h2>
+          <div class="w-24 h-1 bg-[#FF6600] mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="animate__animated animate__fadeInLeft">
+            <form id="contactForm" class="space-y-6">
+              <div>
+                <label for="contactName" class="block text-gray-300 mb-2">Name</label>
+                <input type="text" id="contactName" name="name" required
+                  class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-700 focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC] focus:ring-opacity-50 transition-colors duration-200"
+                  placeholder="Your name">
+              </div>
+
+              <div>
+                <label for="contactEmail" class="block text-gray-300 mb-2">Email</label>
+                <input type="email" id="contactEmail" name="email" required
+                  class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-700 focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC] focus:ring-opacity-50 transition-colors duration-200"
+                  placeholder="Your email">
+              </div>
+
+              <div>
+                <label for="message" class="block text-gray-300 mb-2">Message</label>
+                <textarea id="message" name="message" rows="4" required
+                  class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-700 focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC] focus:ring-opacity-50 transition-colors duration-200"
+                  placeholder="Your message"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-[#0066CC] hover:bg-[#0055aa] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#0066CC]/50">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Social Links -->
+          <div class="space-y-8 animate__animated animate__fadeInRight">
+            <div class="bg-neutral-800 rounded-xl p-8">
+              <h3 class="text-2xl font-bold mb-6">Connect on Social Media</h3>
+              <div class="space-y-4">
+                <a href="https://instagram.com" target="_blank" 
+                   class="flex items-center space-x-4 text-gray-300 hover:text-[#FF6600] transition-colors duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <span>Follow us on Instagram</span>
+                </a>
+
+                <a href="https://twitter.com" target="_blank" 
+                   class="flex items-center space-x-4 text-gray-300 hover:text-[#FF6600] transition-colors duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                  <span>Follow us on Twitter</span>
+                </a>
+
+                <a href="https://youtube.com" target="_blank"
+                   class="flex items-center space-x-4 text-gray-300 hover:text-[#FF6600] transition-colors duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Subscribe on YouTube</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-neutral-800 rounded-xl p-8">
+              <h3 class="text-2xl font-bold mb-4">Quick Start</h3>
+              <p class="text-gray-300 mb-6">
+                DM me "TWT" on Instagram to get started today!
+              </p>
+              <a href="https://instagram.com" target="_blank"
+                 class="inline-block bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#FF6600]/50">
+                Send DM on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const message = document.getElementById('message').value;
+      
+      // Here you would typically send this data to your backend
+      console.log('Contact form submitted:', { name, email, message });
+      
+      // Show success message
+      alert('Thanks for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</div></element><element id="03b942a5-856c-48cf-b619-995785d37493" data-section-id="03b942a5-856c-48cf-b619-995785d37493">
+
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Footer Grid -->
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <!-- Brand Column -->
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-[#0066CC]">TWT</h3>
+            <p class="text-gray-400">Training with Tendinopathy - Your path to pain-free performance.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="/privacy" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#resources" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                  Resources
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Connect</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-[#FF6600] transition-colors duration-200">
+                <span class="sr-only">YouTube</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Stay Updated</h4>
+            <form class="space-y-2">
+              <input type="email" placeholder="Your email address" 
+                     class="w-full px-4 py-2 rounded-lg bg-neutral-800 border border-neutral-700 focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC] focus:ring-opacity-50 transition-colors duration-200">
+              <button type="submit" 
+                      class="w-full bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-neutral-800 pt-8 mt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">
+              © 2024 Training with Tendinopathy. All rights reserved.
+            </p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+              <a href="/privacy" class="text-gray-400 hover:text-[#FF6600] text-sm transition-colors duration-200">
+                Privacy Policy
+              </a>
+              <a href="/terms" class="text-gray-400 hover:text-[#FF6600] text-sm transition-colors duration-200">
+                Terms of Service
+              </a>
+              <a href="#contact" class="text-gray-400 hover:text-[#FF6600] text-sm transition-colors duration-200">
+                Contact
+              </a>
+              <a href="#resources" class="text-gray-400 hover:text-[#FF6600] text-sm transition-colors duration-200">
+                Resources
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
