@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>Iain Allen - Preview</title>
+      <!-- SEO Description -->
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+             fontFamily: {
+  sans: ['{{settings.fonts.primary}}', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+  heading: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+},
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="24296634-bdca-4535-92cb-fe6d9c34ecdd" data-section-id="24296634-bdca-4535-92cb-fe6d9c34ecdd">
+
+
+                
+<div id="root">
+    <nav class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm" id="el-c493log0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-sf5brlxt">
+            <div class="flex items-center justify-between h-16" id="el-s9tog6ha">
+                <div class="flex-shrink-0 text-white font-bold" id="el-e37wwc2z">
+                    IAIN ALLEN
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden" id="el-5lib24uh">
+                    <button id="menu-btn" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-383grmwt">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="el-jzok4ne1"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:block" id="el-q3pftl8w">
+                    <div class="ml-10 flex items-baseline space-x-8" id="el-aylb2xvf">
+                        Menu will come here
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3" id="el-zlfnx11u">
+                Menu will come here
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="min-h-[70vh] bg-neutral-900 flex items-center relative overflow-hidden" style="display: flex; flex-direction: column;">
+        <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/70 to-neutral-900 z-10" id="el-pkun1dg5"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20" id="el-9bs88eng" style="justify-content: center; text-align: center; align-items: center;">
+            <div class="text-center md:text-left" id="el-lvc8rfex">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate__animated animate__fadeInUp" id="el-hj1u5k7u">
+                    Elite Coaching for Strength, Performance, and Confidence
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl animate__animated animate__fadeInUp animate__delay-1s" id="el-mms6uijp">
+                    Helping men &amp; women build strength, drop body fat, and push their limits—online or in-person.
+                </p>
+                
+                <button class="bg-[#2C7AFF] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#2C7AFF]/90 transition-colors animate__animated animate__fadeInUp animate__delay-2s" id="el-vqxx4ahn">
+                    Start Your Journey Today
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !isHidden);
+            mobileMenu.classList.toggle('animate__animated', true);
+            mobileMenu.classList.toggle('animate__fadeIn', !isHidden);
+            mobileMenu.classList.toggle('animate__fadeOut', isHidden);
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        Array.from(mobileLinks).forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</div>
+
+              </element><element id="1dcabda4-66b8-4f43-a7e6-d42779fcc725" data-section-id="1dcabda4-66b8-4f43-a7e6-d42779fcc725">
+
+
+<div id="root">
+    <section id="about" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white animate__animated animate__fadeInUp">Meet Iain Allen</h2>
+                <div class="w-20 h-1 bg-[#2C7AFF] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-700/50 p-6 rounded-lg backdrop-blur-sm hover:bg-neutral-700/70 transition-all">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Claims to be 6ft (depending on trainers 😂) and proudly wears the badge of a coffee snob, exclusively sipping from independent shops ☕️
+                        </p>
+                    </div>
+
+                    <div class="bg-neutral-700/50 p-6 rounded-lg backdrop-blur-sm hover:bg-neutral-700/70 transition-all">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Married young with two amazing kids, often surprising people when they learn he's only 28 ❤️
+                        </p>
+                    </div>
+
+                    <div class="bg-neutral-700/50 p-6 rounded-lg backdrop-blur-sm hover:bg-neutral-700/70 transition-all">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Passionate about fitness trends—CrossFit, Hyrox, running 💪, and proud of his rugby league background, having played for his country 🏉
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-700/50 p-6 rounded-lg backdrop-blur-sm hover:bg-neutral-700/70 transition-all">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            An avid traveler with a mission to explore every European country and continent ✈️
+                        </p>
+                    </div>
+
+                    <div class="bg-neutral-700/50 p-6 rounded-lg backdrop-blur-sm hover:bg-neutral-700/70 transition-all">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Finds his zen in outdoor adventures 🏕️, always seeking new challenges and experiences
+                        </p>
+                    </div>
+
+                    <div id="didYouKnow" class="bg-[#2C7AFF]/10 p-6 rounded-lg border border-[#2C7AFF] cursor-pointer hover:bg-[#2C7AFF]/20 transition-all">
+                        <h3 class="text-white text-xl font-semibold mb-2">Did You Know? 🤔</h3>
+                        <p class="text-gray-300 text-lg hidden" id="funFact">Click to reveal a random fact about Iain!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const funFacts = [
+            "Iain can deadlift over twice his bodyweight!",
+            "He's completed multiple marathons without proper training 😅",
+            "His coffee order is always a flat white, no exceptions",
+            "He's visited over 20 European countries so far",
+            "He started his fitness journey at just 16 years old"
+        ];
+
+        const didYouKnow = document.getElementById('didYouKnow');
+        const funFactElement = document.getElementById('funFact');
+        let currentFactIndex = -1;
+
+        didYouKnow.addEventListener('click', () => {
+            currentFactIndex = (currentFactIndex + 1) % funFacts.length;
+            funFactElement.textContent = funFacts[currentFactIndex];
+            funFactElement.classList.remove('hidden');
+            funFactElement.classList.add('animate__animated', 'animate__fadeIn');
+            
+            setTimeout(() => {
+                funFactElement.classList.remove('animate__fadeIn');
+            }, 1000);
+        });
+    </script>
+</div>
+</element><element id="80d06a9b-293b-43b2-966d-42abd69efd24" data-section-id="80d06a9b-293b-43b2-966d-42abd69efd24">
+
+
+<div id="root">
+    <section id="results" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white animate__animated animate__fadeInUp">Transformations & Achievements</h2>
+                <div class="w-20 h-1 bg-[#2C7AFF] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="space-y-8 animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Client Achievements</h3>
+                    
+                    <div class="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#2C7AFF] text-4xl">🏋️</div>
+                            <div>
+                                <h4 class="text-white text-lg font-semibold mb-2">Fat Loss Success</h4>
+                                <p class="text-gray-300">Clients achieving 20-80 lbs of sustainable fat loss through structured programming.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#2C7AFF] text-4xl">💪</div>
+                            <div>
+                                <h4 class="text-white text-lg font-semibold mb-2">Strength Milestones</h4>
+                                <p class="text-gray-300">Multiple clients achieving double bodyweight deadlifts and significant strength gains.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#2C7AFF] text-4xl">🏃</div>
+                            <div>
+                                <h4 class="text-white text-lg font-semibold mb-2">Running Achievements</h4>
+                                <p class="text-gray-300">Couch to 10K successes and marathon completions with proper training.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8 animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Competition Prep & Sports</h3>
+                    
+                    <div class="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#2C7AFF] text-4xl">🏆</div>
+                            <div>
+                                <h4 class="text-white text-lg font-semibold mb-2">Powerlifting & Strongman</h4>
+                                <p class="text-gray-300">Successful competition preparation and podium placements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#2C7AFF] text-4xl">⚽</div>
+                            <div>
+                                <h4 class="text-white text-lg font-semibold mb-2">Football Performance</h4>
+                                <p class="text-gray-300">Professional and youth player development programming.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#2C7AFF]/10 border border-[#2C7AFF] rounded-lg p-6">
+                        <div id="achievement-counter" class="text-center">
+                            <h4 class="text-white text-lg font-semibold mb-2">Total Transformations</h4>
+                            <div class="text-[#2C7AFF] text-4xl font-bold"><span id="transform-count">0</span>+</div>
+                            <p class="text-gray-300 mt-2">Successful transformations and counting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Counter animation
+        const counter = document.getElementById('transform-count');
+        const target = 500;
+        let count = 0;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && count === 0) {
+                    const interval = setInterval(() => {
+                        count += Math.ceil(target / 100);
+                        if (count >= target) {
+                            count = target;
+                            clearInterval(interval);
+                        }
+                        counter.textContent = count;
+                    }, 20);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.getElementById('achievement-counter'));
+    </script>
+</div>
+</element><element id="2f7461ef-01fd-4d44-ba95-48fd8d70e67b" data-section-id="2f7461ef-01fd-4d44-ba95-48fd8d70e67b">
+
+
+<div id="root">
+    <section id="services" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white animate__animated animate__fadeInUp">Coaching Services</h2>
+                <div class="w-20 h-1 bg-[#2C7AFF] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1:1 Training -->
+                <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp">
+                    <div class="text-[#2C7AFF] text-4xl mb-4">💪</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">1:1 Training Sessions</h3>
+                    <p class="text-gray-300 mb-6">Personal training sessions tailored to your goals, with hands-on coaching and form correction.</p>
+                    <div class="text-[#2C7AFF] font-medium">(In-Person Only)</div>
+                </div>
+
+                <!-- Online Coaching -->
+                <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="text-[#2C7AFF] text-4xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Online Coaching</h3>
+                    <p class="text-gray-300 mb-6">High-Performance Training programs with regular check-ins and adjustments for optimal results.</p>
+                    <div class="text-[#2C7AFF] font-medium">Remote Training Available</div>
+                </div>
+
+                <!-- Training Programming -->
+                <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="text-[#2C7AFF] text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Training Programming</h3>
+                    <p class="text-gray-300 mb-6">Custom programming with exclusive access to coaching app for tracking and progress.</p>
+                    <div class="text-[#2C7AFF] font-medium">App Access Included</div>
+                </div>
+
+                <!-- Nutrition Programming -->
+                <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="text-[#2C7AFF] text-4xl mb-4">🥗</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Nutrition Programming</h3>
+                    <p class="text-gray-300 mb-6">Personalized meal plans and nutrition guidance to support your fitness journey.</p>
+                    <div class="text-[#2C7AFF] font-medium">Meal Templates Included</div>
+                </div>
+
+                <!-- Goal Mapping -->
+                <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="text-[#2C7AFF] text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Goal Mapping Sessions</h3>
+                    <p class="text-gray-300 mb-6">Strategic planning sessions to set clear objectives and create actionable plans.</p>
+                    <div class="text-[#2C7AFF] font-medium">1:1 & Online Available</div>
+                </div>
+
+                <!-- Members Hub -->
+                <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                    <div class="text-[#2C7AFF] text-4xl mb-4">🔐</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Members Hub Access</h3>
+                    <p class="text-gray-300 mb-6">Exclusive access to resources, tutorials, and community support.</p>
+                    <div class="text-[#2C7AFF] font-medium">Weekly Check-ins Included</div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <button class="bg-[#2C7AFF] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#2C7AFF]/90 transition-colors animate__animated animate__fadeInUp">
+                    Start Your Fitness Journey
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+</element><element id="1ec8ec83-2b1b-4bb1-891e-be8ed53ffc7a" data-section-id="1ec8ec83-2b1b-4bb1-891e-be8ed53ffc7a">
+
+
+<div id="root">
+    <section id="whyiain" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white animate__animated animate__fadeInUp">What Sets Me Apart</h2>
+                <div class="w-20 h-1 bg-[#2C7AFF] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <!-- Feature Cards -->
+                    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1 animate__animated animate__fadeInLeft">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-[#2C7AFF]/10 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-[#2C7AFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Personalized Approach</h3>
+                                <p class="text-gray-300">Every program is custom-built for your unique goals and lifestyle.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1 animate__animated animate__fadeInLeft" style="animation-delay: 0.1s;">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-[#2C7AFF]/10 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-[#2C7AFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Accountability & Support</h3>
+                                <p class="text-gray-300">High-touch coaching with direct WhatsApp access for constant support.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1 animate__animated animate__fadeInLeft" style="animation-delay: 0.2s;">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-[#2C7AFF]/10 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-[#2C7AFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">No B.S. Coaching</h3>
+                                <p class="text-gray-300">Straightforward advice that gets results, no fluff or false promises.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-800/80 transition-all transform hover:-translate-y-1 animate__animated animate__fadeInLeft" style="animation-delay: 0.3s;">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-[#2C7AFF]/10 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-[#2C7AFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Flexible Options</h3>
+                                <p class="text-gray-300">Train in-person or online at your convenience, adapting to your schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:pl-12 animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-800 rounded-xl p-8 relative">
+                        <svg class="absolute text-[#2C7AFF] w-12 h-12 -top-6 left-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                        <div class="pt-6">
+                            <p class="text-xl text-gray-300 mb-6 italic">
+                                "As a coach, I can get you anywhere… except a bodybuilding stage or an Ironman. Everything else? I've got you covered!"
+                            </p>
+                            <div class="flex items-center">
+                                <div>
+                                    <p class="font-semibold text-white">Iain Allen</p>
+                                    <p class="text-gray-400">Personal Training & Performance Coach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</element><element id="18c4f5df-8d46-42f4-becd-5b50031ac712" data-section-id="18c4f5df-8d46-42f4-becd-5b50031ac712">
+
+<div id="root">
+    <section id="testimonials" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white animate__animated animate__fadeInUp">Client Success Stories</h2>
+                <div class="w-20 h-1 bg-[#2C7AFF] mx-auto mt-4"></div>
+            </div>
+
+            <div class="testimonial-carousel relative">
+                <div class="overflow-hidden">
+                    <div class="testimonial-track flex transition-transform duration-500">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-neutral-900 rounded-xl p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-[#2C7AFF]">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-4">"Iain's approach to training is exactly what I needed. Lost 25kg and gained more strength than ever before!"</p>
+                                <div class="mt-4">
+                                    <p class="font-semibold text-white">Alan</p>
+                                    <p class="text-gray-400">6 Months Training</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-neutral-900 rounded-xl p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-[#2C7AFF]">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-4">"From never running to completing my first 10K. Iain's support and programming made it possible!"</p>
+                                <div class="mt-4">
+                                    <p class="font-semibold text-white">Jordan</p>
+                                    <p class="text-gray-400">3 Months Training</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-neutral-900 rounded-xl p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-[#2C7AFF]">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-4">"The personalized approach and constant support made all the difference. Best investment in myself!"</p>
+                                <div class="mt-4">
+                                    <p class="font-semibold text-white">Ji-Hyang</p>
+                                    <p class="text-gray-400">12 Months Training</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-[#2C7AFF] p-2 rounded-full hover:bg-[#2C7AFF]/80 transition-colors" id="prev-btn">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-[#2C7AFF] p-2 rounded-full hover:bg-[#2C7AFF]/80 transition-colors" id="next-btn">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const track = document.querySelector('.testimonial-track');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const slideWidth = slides[0].offsetWidth;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        // Auto-advance carousel
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }, 5000);
+
+        // Update on window resize
+        window.addEventListener('resize', updateCarousel);
+    </script>
+</div></element><element id="dbef2bbc-be47-4df4-9736-a80144c148f2" data-section-id="dbef2bbc-be47-4df4-9736-a80144c148f2">
+
+<div id="root">
+    <section id="contact" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white animate__animated animate__fadeInUp">Start Your Journey Today</h2>
+                <div class="w-20 h-1 bg-[#2C7AFF] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8 animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-800 rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:border-[#2C7AFF] transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:border-[#2C7AFF] transition-colors">
+                            </div>
+                            <div>
+                                <label for="goal" class="block text-gray-300 mb-2">Your Main Goal</label>
+                                <textarea id="goal" name="goal" rows="4" required
+                                    class="w-full px-4 py-3 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:border-[#2C7AFF] transition-colors"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-[#2C7AFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2C7AFF]/90 transition-colors">
+                                Book Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="space-y-6 animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-800 rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold text-white mb-6">Alternative Ways to Connect</h3>
+                        
+                        <div class="space-y-4">
+                            <a href="https://instagram.com/kilmarnock.gym" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center space-x-4 p-4 bg-neutral-700 rounded-lg hover:bg-neutral-700/80 transition-colors">
+                                <svg class="w-6 h-6 text-[#2C7AFF]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                <span class="text-gray-300">@kilmarnock.gym</span>
+                            </a>
+
+                            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center space-x-4 p-4 bg-neutral-700 rounded-lg hover:bg-neutral-700/80 transition-colors">
+                                <svg class="w-6 h-6 text-[#2C7AFF]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span class="text-gray-300">Message on WhatsApp</span>
+                            </a>
+
+                            <div class="p-4 bg-neutral-700 rounded-lg">
+                                <p class="text-gray-300">📍 Visit the Gym:</p>
+                                <p class="text-white font-semibold mt-2">Kilmarnock Gym</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Add your form submission logic here
+            const formData = new FormData(form);
+            console.log('Form submitted:', Object.fromEntries(formData));
+            
+            // Reset form
+            form.reset();
+            
+            // Show success message (you can customize this)
+            alert('Thanks for reaching out! I\'ll get back to you soon.');
+        });
+    </script>
+</div></element><element id="c637e27b-ece2-4694-9110-45dbc1b9ddab" data-section-id="c637e27b-ece2-4694-9110-45dbc1b9ddab">
+
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Navigation -->
+                <div class="space-y-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                    <a href="#hero" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="block text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#results" class="block text-gray-400 hover:text-white transition-colors">Results</a>
+                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="#whyiain" class="block text-gray-400 hover:text-white transition-colors">Why Choose Me</a>
+                    <a href="#testimonials" class="block text-gray-400 hover:text-white transition-colors">Testimonials</a>
+                    <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+
+                <!-- Services -->
+                <div class="space-y-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">1:1 Training</a>
+                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Online Coaching</a>
+                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Nutrition Planning</a>
+                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Goal Mapping</a>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Get in Touch</h3>
+                    <a href="https://instagram.com/kilmarnock.gym" target="_blank" rel="noopener noreferrer" class="block text-gray-400 hover:text-white transition-colors">
+                        @kilmarnock.gym
+                    </a>
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="block text-gray-400 hover:text-white transition-colors">
+                        WhatsApp
+                    </a>
+                    <a href="mailto:contact@example.com" class="block text-gray-400 hover:text-white transition-colors">
+                        Email Us
+                    </a>
+                </div>
+
+                <!-- Location -->
+                <div class="space-y-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Location</h3>
+                    <p class="text-gray-400">Kilmarnock Gym</p>
+                    <p class="text-gray-400">📍 Visit us in person</p>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 py-8 border-t border-neutral-800">
+                <a href="https://instagram.com/kilmarnock.gym" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">WhatsApp</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </a>
+                <a href="mailto:contact@example.com" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">Email</span>
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center pt-8 border-t border-neutral-800">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Iain Allen Coaching. All rights reserved.
+                </p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="https://instagram.com/kilmarnock.gym" class="text-gray-400 hover:text-white text-sm transition-colors">Instagram</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white text-sm transition-colors">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          

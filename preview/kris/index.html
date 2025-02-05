@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>Kris - Preview</title>
+      <!-- SEO Description -->
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+             fontFamily: {
+  sans: ['{{settings.fonts.primary}}', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+  heading: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+},
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="8e9cd1f5-e4ed-4493-b638-a5201e482efe" data-section-id="8e9cd1f5-e4ed-4493-b638-a5201e482efe">
+
+
+<div id="root">
+    <nav class="fixed top-0 w-full z-50 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold">KRIS</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#hero" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#testimonials" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                        <a href="#freeguide" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Free Guide</a>
+                        <a href="#program" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Program</a>
+                        <a href="#faq" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                        <a href="#contact" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-neutral-700 focus:outline-none">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">About</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Testimonials</a>
+                <a href="#freeguide" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Free Guide</a>
+                <a href="#program" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Program</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">FAQ</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-[70vh] flex items-center pt-16 bg-neutral-900 text-white">
+        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900/90 to-neutral-900/70"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn">
+                    Rebuild Your Confidence.<br>
+                    Take Control of Your Life.<br>
+                    Get Strong Again.
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 animate__animated animate__fadeIn animate__delay-1s">
+                    Transform your body and mindset with personalised coaching designed for men in their 30s.
+                </p>
+                <a href="#program" class="inline-block bg-[#ff5722] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5722]/90 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    Get Started Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</div>
+</element><element id="cceba77e-250e-4b3e-8dae-5ed2d25fc51d" data-section-id="cceba77e-250e-4b3e-8dae-5ed2d25fc51d">
+
+
+<div id="root">
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate__animated animate__fadeInLeft">
+                    <h2 class="text-4xl font-bold text-neutral-900 mb-6">About Kris</h2>
+                    <div class="space-y-4 text-lg text-neutral-700">
+                        <p class="leading-relaxed">
+                            Hi, I'm Kris. In my 20s, I was full of confidence. But when I hit 30, I felt like I lost my edge. Over time, I became a shell of who I once was.
+                        </p>
+                        <p class="leading-relaxed">
+                            I worked relentlessly to rebuild my confidence and take control of my life again. That's why I started my coaching business—to help guys like you feel strong again, improve their mindset, and regain control of their lives.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <a href="#program" class="inline-block bg-[#ff5722] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5722]/90 transition-all duration-300">
+                            Learn About My Program
+                        </a>
+                    </div>
+                </div>
+                <div class="relative h-[500px] bg-neutral-200 rounded-lg overflow-hidden animate__animated animate__fadeInRight">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-neutral-600">Kris's Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</element><element id="99eaf657-16ad-4fdd-9385-34233d935a0e" data-section-id="99eaf657-16ad-4fdd-9385-34233d935a0e">
+
+
+<div id="root">
+    <section id="testimonials" class="py-20 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 animate__animated animate__fadeIn">What My Clients Say</h2>
+                <p class="text-xl text-neutral-300 animate__animated animate__fadeIn">Don't just take my word for it—here's what my clients say about working with me.</p>
+            </div>
+
+            <div class="testimonial-slider relative">
+                <div class="swiper-container">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp">
+                            <div class="h-12 w-12 bg-neutral-700 rounded-full mb-4"></div>
+                            <p class="text-lg mb-4">"My mental health has improved massively. I have purpose, clear goals, and more confidence than ever."</p>
+                            <p class="font-semibold">- Alan</p>
+                        </div>
+
+                        <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-1s">
+                            <div class="h-12 w-12 bg-neutral-700 rounded-full mb-4"></div>
+                            <p class="text-lg mb-4">"In just 8 weeks, Kris got me in the best shape of my life while navigating a previous injury."</p>
+                            <p class="font-semibold">- Jordan</p>
+                        </div>
+
+                        <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+                            <div class="h-12 w-12 bg-neutral-700 rounded-full mb-4"></div>
+                            <p class="text-lg mb-4">"His training re-energised my love for the gym. It's fun, tailored, and incredibly effective."</p>
+                            <p class="font-semibold">- Declan</p>
+                        </div>
+
+                        <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-3s">
+                            <div class="h-12 w-12 bg-neutral-700 rounded-full mb-4"></div>
+                            <p class="text-lg mb-4">"Kris simplifies fitness. He removes all the guesswork, so you can focus on results."</p>
+                            <p class="font-semibold">- Ji-Hyang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#program" class="inline-block bg-[#ff5722] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5722]/90 transition-all duration-300 animate__animated animate__fadeIn">
+                    Start Your Transformation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const testimonialsSection = document.querySelector('#testimonials');
+        const cards = testimonialsSection.querySelectorAll('.animate__animated');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.visibility = 'visible';
+                    entry.target.classList.add('animate__fadeInUp');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        cards.forEach(card => {
+            card.style.visibility = 'hidden';
+            observer.observe(card);
+        });
+    </script>
+</div>
+</element><element id="79aff997-5daa-4c55-babb-ff360079d339" data-section-id="79aff997-5daa-4c55-babb-ff360079d339">
+
+
+<div id="root">
+    <section id="freeguide" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate__animated animate__fadeInLeft">
+                    <h2 class="text-4xl font-bold text-neutral-900 mb-6">Struggling to Build Gym Consistency? Start Here.</h2>
+                    <p class="text-lg text-neutral-700 mb-8">
+                        Progress doesn't come from extreme changes. My free Gym Reset Guide will show you how to make the gym a seamless part of your life—without feeling overwhelmed.
+                    </p>
+                    <form id="guideForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-neutral-700">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="mt-1 block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-[#ff5722] focus:border-[#ff5722]">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-neutral-700">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-[#ff5722] focus:border-[#ff5722]">
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-[#ff5722] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5722]/90 transition-all duration-300">
+                            Send Me the Free Guide
+                        </button>
+                        <p class="text-sm text-neutral-600 text-center">No spam—just real, actionable advice.</p>
+                    </form>
+                </div>
+                <div class="bg-neutral-100 p-8 rounded-lg animate__animated animate__fadeInRight">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-neutral-900">What's Inside the Guide:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="ml-3 text-neutral-700">Simple workout routines for beginners</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="ml-3 text-neutral-700">Habit-building strategies that stick</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="ml-3 text-neutral-700">Nutrition basics for beginners</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="ml-3 text-neutral-700">Mindset tips for lasting motivation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('guideForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            // Add your form submission logic here
+            alert('Thank you! Your guide will be sent to your email shortly.');
+            this.reset();
+        });
+    </script>
+</div>
+</element><element id="9e53e588-90a7-474b-8046-61da3e30ac8c" data-section-id="9e53e588-90a7-474b-8046-61da3e30ac8c">
+
+
+<div id="root">
+    <section id="program" class="py-20 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold mb-6">How I Help You Rebuild Strength & Confidence</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-neutral-800 p-8 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp">
+                    <div class="text-[#ff5722] text-5xl font-bold mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-4">Getting Started</h3>
+                    <ul class="space-y-3 text-neutral-300">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Personalised assessment form</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Movement assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Food journaling setup</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-neutral-800 p-8 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="text-[#ff5722] text-5xl font-bold mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-4">Personalised Training</h3>
+                    <ul class="space-y-3 text-neutral-300">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Custom workout plans</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">WhatsApp form checks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Progress tracking</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-neutral-800 p-8 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="text-[#ff5722] text-5xl font-bold mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-4">Mindset & Growth</h3>
+                    <ul class="space-y-3 text-neutral-300">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Daily habit challenges</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Confidence journal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Self-reflection work</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-neutral-800 p-8 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="text-[#ff5722] text-5xl font-bold mb-4">04</div>
+                    <h3 class="text-xl font-bold mb-4">Ongoing Support</h3>
+                    <ul class="space-y-3 text-neutral-300">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Coaching app access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">WhatsApp support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-[#ff5722] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="ml-3">Regular check-ins</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-16 animate__animated animate__fadeIn">
+                <a href="#contact" class="inline-block bg-[#ff5722] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5722]/90 transition-all duration-300">
+                    Ready to Start? Apply for Coaching Now!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const programSection = document.querySelector('#program');
+        const cards = programSection.querySelectorAll('.animate__animated');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.visibility = 'visible';
+                    entry.target.classList.add('animate__fadeInUp');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        cards.forEach(card => {
+            card.style.visibility = 'hidden';
+            observer.observe(card);
+        });
+    </script>
+</div>
+</element><element id="3c1c27b6-3c15-4a6c-bea6-7963551a6bb4" data-section-id="3c1c27b6-3c15-4a6c-bea6-7963551a6bb4">
+
+
+<div id="root">
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-neutral-900">Common Questions</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="faq-item bg-neutral-100 rounded-lg overflow-hidden animate__animated animate__fadeInUp">
+                    <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold text-neutral-900">What if I'm new to the gym?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-neutral-700">No problem! I'll guide you through everything step by step.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-neutral-100 rounded-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
+                    <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold text-neutral-900">What if I have an injury?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-neutral-700">Programs are modified for injuries. Plus, I provide ongoing adjustments.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-neutral-100 rounded-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-2s">
+                    <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold text-neutral-900">How is this different from just following a workout program?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-neutral-700">You get direct feedback, expert guidance, and accountability—not just a PDF.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-neutral-100 rounded-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-3s">
+                    <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold text-neutral-900">How long before I see results?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-neutral-700">Most clients feel stronger and more confident in the first 4-6 weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const faqButtons = document.querySelectorAll('.faq-button');
+        
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const arrow = button.querySelector('svg');
+                
+                // Toggle the answer
+                answer.classList.toggle('hidden');
+                
+                // Rotate the arrow
+                arrow.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                
+                // Close other open FAQs
+                faqButtons.forEach(otherButton => {
+                    if (otherButton !== button) {
+                        const otherFaqItem = otherButton.closest('.faq-item');
+                        const otherAnswer = otherFaqItem.querySelector('.faq-answer');
+                        const otherArrow = otherButton.querySelector('svg');
+                        
+                        otherAnswer.classList.add('hidden');
+                        otherArrow.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.visibility = 'visible';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.animate__animated').forEach(el => {
+            el.style.visibility = 'hidden';
+            observer.observe(el);
+        });
+    </script>
+</div>
+</element><element id="5e770bb3-c76a-44bd-a101-054ea7a0f239" data-section-id="5e770bb3-c76a-44bd-a101-054ea7a0f239">
+
+
+<div id="root">
+    <section id="contact" class="py-20 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold mb-4">Let's Connect!</h2>
+                <p class="text-xl text-neutral-300">Ready to transform your life? Get in touch today.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="animate__animated animate__fadeInLeft">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-neutral-300">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="mt-1 block w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:ring-[#ff5722] focus:border-[#ff5722]">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-neutral-300">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:ring-[#ff5722] focus:border-[#ff5722]">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-neutral-300">Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="mt-1 block w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:ring-[#ff5722] focus:border-[#ff5722]">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-neutral-300">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="mt-1 block w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:ring-[#ff5722] focus:border-[#ff5722]"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-[#ff5722] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5722]/90 transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="space-y-8 animate__animated animate__fadeInRight">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Connect on Social Media</h3>
+                        <div class="flex space-x-4">
+                            {{#each footerNav}}
+                                {{#if (includes this.label "Instagram" "YouTube" "Twitter" "LinkedIn")}}
+                                    <a href="{{this.link}}" class="text-neutral-300 hover:text-[#ff5722] transition-colors duration-300">
+                                        <span class="sr-only">{{this.label}}</span>
+                                        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                            {{#if (eq this.label "Instagram")}}
+                                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                            {{/if}}
+                                            {{#if (eq this.label "YouTube")}}
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            {{/if}}
+                                            {{#if (eq this.label "Twitter")}}
+                                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                            {{/if}}
+                                            {{#if (eq this.label "LinkedIn")}}
+                                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                            {{/if}}
+                                        </svg>
+                                    </a>
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Quick Connect</h3>
+                        <p class="text-neutral-300">DM me 'COACHING' on Instagram to chat!</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Book a Call</h3>
+                        <a href="#" class="text-[#ff5722] hover:text-[#ff5722]/90 transition-colors duration-300">
+                            Schedule a free consultation →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message. I will get back to you soon!');
+            this.reset();
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.visibility = 'visible';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.animate__animated').forEach(el => {
+            el.style.visibility = 'hidden';
+            observer.observe(el);
+        });
+    </script>
+</div>
+</element><element id="14407829-2cd3-4ce1-9be7-0797ddd0e763" data-section-id="14407829-2cd3-4ce1-9be7-0797ddd0e763">
+
+
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">KRIS</h3>
+                    <p class="text-neutral-400">Transform your body and mindset with personalised coaching designed for men in their 30s.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        {{#each headerNav}}
+                        <li>
+                            <a href="{{this.link}}" class="text-neutral-400 hover:text-white transition-colors duration-300">{{this.label}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Legal</h4>
+                    <ul class="space-y-2">
+                        {{#each footerNav}}
+                        {{#if (includes this.label "Privacy Policy" "Terms of Service")}}
+                        <li>
+                            <a href="{{this.link}}" class="text-neutral-400 hover:text-white transition-colors duration-300">{{this.label}}</a>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        {{#each footerNav}}
+                        {{#if (includes this.label "Instagram" "YouTube" "Twitter" "LinkedIn")}}
+                        <a href="{{this.link}}" class="text-neutral-400 hover:text-[#ff5722] transition-colors duration-300">
+                            <span class="sr-only">{{this.label}}</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                {{#if (eq this.label "Instagram")}}
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                {{/if}}
+                                {{#if (eq this.label "YouTube")}}
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                {{/if}}
+                                {{#if (eq this.label "Twitter")}}
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                {{/if}}
+                                {{#if (eq this.label "LinkedIn")}}
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                {{/if}}
+                            </svg>
+                        </a>
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-neutral-800 mt-12 pt-8 text-center text-neutral-400">
+                <p>&copy; {{currentYear}} Kris Fitness Coaching. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('#footer').querySelector('.currentYear').textContent = new Date().getFullYear();
+    </script>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
