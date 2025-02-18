@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+       <link href="{{fontLink}}" rel="stylesheet">
+       <link href="{{secondaryFontLink}}" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['{{settings.fonts.primary}}', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+                body: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: {{settings.fonts.primary}}, system-ui, sans-serif;
+        }
+        body {
+          font-family: {{settings.fonts.secondary}}, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="709d6ab1-98be-4c57-acad-83c470b9a894" data-section-id="709d6ab1-98be-4c57-acad-83c470b9a894">
+
+
+<div id="root">
+  <header id="header" class="bg-white shadow-md fixed w-full top-0 z-50">
+    <!-- Top Bar -->
+    <div class="bg-green-600 text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-4 text-sm">
+          <span class="flex items-center">
+            <i class="fa-solid fa-phone mr-2"></i>
+            +234-802-523-4859
+          </span>
+          <span class="hidden md:flex items-center">
+            <i class="fa-solid fa-envelope mr-2"></i>
+            sales@gosolarmart.com
+          </span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-gray-200">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="hover:text-gray-200">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="hover:text-gray-200">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-green-600">
+          SolarMart
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors">Home</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors">Products</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors">Solutions</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors">About</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header Section with Background Image and Centered Content -->
+<header class="bg-cover bg-center" style="background-image: url('path/to/your-image.jpg');">
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex justify-center items-center">
+      <div class="flex items-center space-x-4">
+        <button class="p-2 hover:text-green-600 transition-colors">
+          <i class="fa-solid fa-search"></i>
+        </button>
+        <button class="p-2 hover:text-green-600 transition-colors relative">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span class="absolute -top-1 -right-1 bg-green-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+        </button>
+        <button class="p-2 hover:text-green-600 transition-colors">
+          <i class="fa-solid fa-user"></i>
+        </button>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden p-2 hover:text-green-600 transition-colors">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="md:hidden hidden bg-white border-t">
+    <div class="container mx-auto px-4 py-2">
+      <div class="flex flex-col space-y-2">
+        <a href="#" class="py-2 text-gray-700 hover:text-green-600 transition-colors">Home</a>
+        <a href="#" class="py-2 text-gray-700 hover:text-green-600 transition-colors">Products</a>
+        <a href="#" class="py-2 text-gray-700 hover:text-green-600 transition-colors">Solutions</a>
+        <a href="#" class="py-2 text-gray-700 hover:text-green-600 transition-colors">About</a>
+        <a href="#" class="py-2 text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section with Centered Text and Background Gradient -->
+<section id="hero" class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-green-50 to-blue-50">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-center md:text-left space-y-6">
+        <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+          Great Value, Unbeatable Prices - Solar Energy Solutions for Homes & Businesses
+        </h1>
+        <p class="text-gray-600 text-lg md:text-xl">
+          Transform your energy future with sustainable, cost-effective solar solutions tailored for African homes and businesses.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#" class="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
+            Start Shopping Now
+          </a>
+          <a href="#" class="inline-block px-8 py-4 border-2 border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-600 hover:text-white transition-all duration-300">
+            Talk with Our Expert
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+      <!-- Trust Badges -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-4 bg-white rounded-lg shadow-md">
+          <i class="fas fa-shield-alt text-2xl text-green-600 mb-2"></i>
+          <p class="text-sm font-medium text-gray-700">Secure Payments</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md">
+          <i class="fas fa-truck text-2xl text-green-600 mb-2"></i>
+          <p class="text-sm font-medium text-gray-700">Fast Delivery</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md">
+          <i class="fas fa-headset text-2xl text-green-600 mb-2"></i>
+          <p class="text-sm font-medium text-gray-700">24/7 Support</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md">
+          <i class="fas fa-certificate text-2xl text-green-600 mb-2"></i>
+          <p class="text-sm font-medium text-gray-700">Quality Guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="dadc7a13-b761-4456-8520-9e12047efff1" data-section-id="dadc7a13-b761-4456-8520-9e12047efff1">
+
+
+<div id="root">
+  <section id="introduction" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Powering Africa's Future with Sustainable Energy Solutions
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            At Solarmart, we're committed to providing top-quality solar energy products and services across Africa. Our mission is to make sustainable energy accessible and affordable, empowering communities with energy independence.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 bg-green-50 rounded-lg">
+              <i class="fas fa-leaf text-2xl text-green-600 mb-2"></i>
+              <h3 class="font-semibold text-gray-800">Sustainable</h3>
+              <p class="text-sm text-gray-600">Clean energy solutions for a greener future</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <i class="fas fa-piggy-bank text-2xl text-blue-600 mb-2"></i>
+              <h3 class="font-semibold text-gray-800">Affordable</h3>
+              <p class="text-sm text-gray-600">Cost-effective energy solutions</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <i class="fas fa-award text-2xl text-blue-600 mb-2"></i>
+              <h3 class="font-semibold text-gray-800">Quality</h3>
+              <p class="text-sm text-gray-600">Premium products & installation</p>
+            </div>
+            <div class="p-4 bg-green-50 rounded-lg">
+              <i class="fas fa-hands-helping text-2xl text-green-600 mb-2"></i>
+              <h3 class="font-semibold text-gray-800">Support</h3>
+              <p class="text-sm text-gray-600">Expert guidance & assistance</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-8">
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Why Choose Solarmart?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                <span class="text-gray-600">Premium quality solar products from trusted manufacturers</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                <span class="text-gray-600">Expert installation and maintenance services</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                <span class="text-gray-600">Competitive pricing and flexible payment options</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                <span class="text-gray-600">Dedicated customer support and after-sales service</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <a href="#" class="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-300 shadow-lg">
+              Explore Our Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="901add94-f6bd-482a-a8c1-cdf36fa0d935" data-section-id="901add94-f6bd-482a-a8c1-cdf36fa0d935">
+
+
+<div id="root">
+  <section id="categories" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Product Categories</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Solar Modules -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+          <div class="h-48 bg-green-100 flex items-center justify-center">
+            <i class="fas fa-solar-panel text-5xl text-green-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Solar Modules</h3>
+            <p class="text-gray-600 mb-4">High-efficiency solar panels for residential and commercial applications.</p>
+            <a href="#" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+              Explore Modules
+            </a>
+          </div>
+        </div>
+
+        <!-- Inverters & Accessories -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+          <div class="h-48 bg-blue-100 flex items-center justify-center">
+            <i class="fas fa-plug text-5xl text-blue-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Inverters & Accessories</h3>
+            <p class="text-gray-600 mb-4">Complete range of inverters and essential solar accessories.</p>
+            <a href="#" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+              View Products
+            </a>
+          </div>
+        </div>
+
+        <!-- Wind Turbines -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+          <div class="h-48 bg-green-100 flex items-center justify-center">
+            <i class="fas fa-wind text-5xl text-green-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Wind Turbines</h3>
+            <p class="text-gray-600 mb-4">Efficient wind energy solutions for sustainable power generation.</p>
+            <a href="#" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+              Discover More
+            </a>
+          </div>
+        </div>
+
+        <!-- Batteries -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+          <div class="h-48 bg-blue-100 flex items-center justify-center">
+            <i class="fas fa-car-battery text-5xl text-blue-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Batteries</h3>
+            <p class="text-gray-600 mb-4">Reliable energy storage solutions for continuous power supply.</p>
+            <a href="#" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+              Shop Batteries
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#" class="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+          View All Categories
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="c7caa5ed-a360-48c6-858c-a30f6d705b07" data-section-id="c7caa5ed-a360-48c6-858c-a30f6d705b07">
+
+
+<div id="root">
+  <section id="featured" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-800">Featured Products</h2>
+        <a href="#" class="text-green-600 hover:text-green-700 font-semibold flex items-center">
+          View All
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Featured Product 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+          <div class="relative">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <i class="fas fa-solar-panel text-5xl text-gray-400"></i>
+            </div>
+            <div class="absolute top-2 right-2">
+              <span class="bg-green-500 text-white px-2 py-1 rounded-md text-sm">-20%</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Premium Solar Panel Kit</h3>
+            <p class="text-gray-600 text-sm mb-2">500W Complete Home Solution</p>
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <span class="text-xl font-bold text-green-600">$599</span>
+                <span class="text-gray-400 line-through text-sm ml-2">$749</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-sm ml-1">4.8</span>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                Add to Cart
+              </button>
+              <button class="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Product 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+          <div class="relative">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <i class="fas fa-plug text-5xl text-gray-400"></i>
+            </div>
+            <div class="absolute top-2 right-2">
+              <span class="bg-blue-500 text-white px-2 py-1 rounded-md text-sm">New</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Smart Inverter Pro</h3>
+            <p class="text-gray-600 text-sm mb-2">3000W Pure Sine Wave</p>
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <span class="text-xl font-bold text-green-600">$899</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-sm ml-1">4.9</span>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                Add to Cart
+              </button>
+              <button class="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Product 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+          <div class="relative">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <i class="fas fa-car-battery text-5xl text-gray-400"></i>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Lithium Battery Pack</h3>
+            <p class="text-gray-600 text-sm mb-2">48V 100Ah Storage</p>
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <span class="text-xl font-bold text-green-600">$1,299</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-sm ml-1">4.7</span>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                Add to Cart
+              </button>
+              <button class="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Product 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+          <div class="relative">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <i class="fas fa-wind text-5xl text-gray-400"></i>
+            </div>
+            <div class="absolute top-2 right-2">
+              <span class="bg-red-500 text-white px-2 py-1 rounded-md text-sm">Hot</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Wind Turbine Kit</h3>
+            <p class="text-gray-600 text-sm mb-2">1000W Hybrid System</p>
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <span class="text-xl font-bold text-green-600">$799</span>
+                <span class="text-gray-400 line-through text-sm ml-2">$999</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-sm ml-1">4.6</span>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                Add to Cart
+              </button>
+              <button class="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="ef68c064-d621-42e5-b589-4a6a5c8c0bcb" data-section-id="ef68c064-d621-42e5-b589-4a6a5c8c0bcb">
+
+
+<div id="root">
+  <section id="specialOffers" class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Special Offers</h2>
+        <p class="text-gray-600">Limited time deals on our most popular products</p>
+      </div>
+
+      <!-- Flash Sale Timer -->
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-2xl font-bold text-gray-800">Flash Sale Ending Soon!</h3>
+            <p class="text-gray-600">Get up to 20% off on selected products</p>
+          </div>
+          <div class="flex space-x-4">
+            <div class="text-center">
+              <div class="bg-gray-800 text-white rounded-lg p-3 w-16">
+                <span class="text-2xl font-bold">24</span>
+                <p class="text-xs">Hours</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-gray-800 text-white rounded-lg p-3 w-16">
+                <span class="text-2xl font-bold">45</span>
+                <p class="text-xs">Minutes</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-gray-800 text-white rounded-lg p-3 w-16">
+                <span class="text-2xl font-bold">30</span>
+                <p class="text-xs">Seconds</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Offers Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Offer 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="inline-block px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm font-semibold mb-2">HOT DEAL</span>
+                <h3 class="text-xl font-bold mb-2">Complete Home Solar Kit</h3>
+                <p class="text-gray-600 mb-4">Includes panels, inverter, and installation</p>
+                <div class="flex items-center mb-4">
+                  <span class="text-3xl font-bold text-green-600">$1,999</span>
+                  <span class="text-gray-400 line-through ml-2">$2,499</span>
+                  <span class="ml-2 text-red-600 font-semibold">Save 20%</span>
+                </div>
+              </div>
+              <i class="fas fa-solar-panel text-5xl text-green-600"></i>
+            </div>
+            <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+              Claim Offer Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-2">BUNDLE DEAL</span>
+                <h3 class="text-xl font-bold mb-2">Business Solar Package</h3>
+                <p class="text-gray-600 mb-4">Perfect for small to medium businesses</p>
+                <div class="flex items-center mb-4">
+                  <span class="text-3xl font-bold text-green-600">$3,499</span>
+                  <span class="text-gray-400 line-through ml-2">$4,299</span>
+                  <span class="ml-2 text-red-600 font-semibold">Save 15%</span>
+                </div>
+              </div>
+              <i class="fas fa-building text-5xl text-blue-600"></i>
+            </div>
+            <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+              Claim Offer Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="#" class="inline-flex items-center px-8 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors">
+          Browse All Offers
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="a24b274c-92ae-43c8-b843-248531555a01" data-section-id="a24b274c-92ae-43c8-b843-248531555a01">
+
+
+<div id="root">
+  <section id="testimonials" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+        <p class="text-gray-600">Trusted by homeowners and businesses across Africa</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-12 h-12 rounded-full mr-4"/>
+            <div>
+              <h3 class="font-semibold text-gray-800">John Doe</h3>
+              <p class="text-sm text-gray-600">Homeowner</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="flex text-yellow-400 mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic">"The solar installation has completely transformed our home's energy consumption. Professional service and excellent product quality!"</p>
+          </div>
+          <p class="text-sm text-gray-500">Verified Purchase</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-12 h-12 rounded-full mr-4"/>
+            <div>
+              <h3 class="font-semibold text-gray-800">Sarah Johnson</h3>
+              <p class="text-sm text-gray-600">Business Owner</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="flex text-yellow-400 mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text-gray-600 italic">"Outstanding return on investment for our business. The energy savings have been substantial, and the customer support is exceptional."</p>
+          </div>
+          <p class="text-sm text-gray-500">Verified Purchase</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-12 h-12 rounded-full mr-4"/>
+            <div>
+              <h3 class="font-semibold text-gray-800">Michael Osei</h3>
+              <p class="text-sm text-gray-600">Farm Owner</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="flex text-yellow-400 mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic">"The solar water pumping system has revolutionized our farming operations. Reliable products and great after-sales service!"</p>
+          </div>
+          <p class="text-sm text-gray-500">Verified Purchase</p>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-white rounded-full p-4 shadow-md inline-block mb-4">
+            <i class="fas fa-award text-4xl text-green-600"></i>
+          </div>
+          <h4 class="font-semibold">Certified Quality</h4>
+          <p class="text-sm text-gray-600">ISO 9001:2015</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-white rounded-full p-4 shadow-md inline-block mb-4">
+            <i class="fas fa-shield-alt text-4xl text-green-600"></i>
+          </div>
+          <h4 class="font-semibold">Secure Payments</h4>
+          <p class="text-sm text-gray-600">256-bit SSL</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-white rounded-full p-4 shadow-md inline-block mb-4">
+            <i class="fas fa-history text-4xl text-green-600"></i>
+          </div>
+          <h4 class="font-semibold">5-Year Warranty</h4>
+          <p class="text-sm text-gray-600">On all products</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-white rounded-full p-4 shadow-md inline-block mb-4">
+            <i class="fas fa-hands-helping text-4xl text-green-600"></i>
+          </div>
+          <h4 class="font-semibold">Expert Support</h4>
+          <p class="text-sm text-gray-600">24/7 Assistance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="5f12099e-a92a-44e0-b497-2bdaafa28bf3" data-section-id="5f12099e-a92a-44e0-b497-2bdaafa28bf3">
+
+
+<div id="root">
+  <section id="education" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Solar Energy Education Hub</h2>
+        <p class="text-gray-600">Learn about sustainable energy solutions for Africa's future</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Why Solar Energy Matters</h3>
+          <p class="text-gray-600 mb-6">
+            Solar energy is revolutionizing Africa's power landscape, providing sustainable and affordable electricity to millions. Learn how solar solutions can transform your energy consumption and contribute to a greener future.
+          </p>
+          <div class="flex justify-between items-center">
+            <a href="#" class="text-green-600 hover:text-green-700 font-semibold flex items-center">
+              Learn More
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <i class="fas fa-sun text-4xl text-yellow-400"></i>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Installation Guide</h3>
+          <p class="text-gray-600 mb-6">
+            Understanding the basics of solar installation helps you make informed decisions. Explore our comprehensive guides on system sizing, placement, and maintenance.
+          </p>
+          <div class="flex justify-between items-center">
+            <a href="#" class="text-green-600 hover:text-green-700 font-semibold flex items-center">
+              View Guides
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <i class="fas fa-tools text-4xl text-gray-600"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Resource Card 1 -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-book text-2xl text-green-600 mr-3"></i>
+            <h4 class="text-lg font-semibold">Solar Basics</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Essential information for beginners about solar energy systems.</p>
+          <a href="#" class="text-green-600 hover:text-green-700 text-sm font-semibold">Read Article →</a>
+        </div>
+
+        <!-- Resource Card 2 -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-calculator text-2xl text-green-600 mr-3"></i>
+            <h4 class="text-lg font-semibold">Savings Calculator</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Calculate your potential savings with solar energy installation.</p>
+          <a href="#" class="text-green-600 hover:text-green-700 text-sm font-semibold">Try Calculator →</a>
+        </div>
+
+        <!-- Resource Card 3 -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-video text-2xl text-green-600 mr-3"></i>
+            <h4 class="text-lg font-semibold">Video Tutorials</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Watch our educational videos about solar system maintenance.</p>
+          <a href="#" class="text-green-600 hover:text-green-700 text-sm font-semibold">Watch Videos →</a>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#" class="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+          <i class="fas fa-graduation-cap mr-2"></i>
+          Visit Learning Center
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="199f82f4-3402-4118-83f8-f3678184883a" data-section-id="199f82f4-3402-4118-83f8-f3678184883a">
+
+
+<div id="root">
+  <section id="support" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Customer Support</h2>
+        <p class="text-gray-600">We're here to help you every step of the way</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <!-- Quick Contact -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div class="text-center mb-6">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-3xl text-green-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+            <p class="text-gray-600 mb-4">Get immediate assistance from our expert team</p>
+            <div class="space-y-2">
+              <p class="flex items-center justify-center text-gray-700">
+                <i class="fas fa-phone mr-2 text-green-600"></i>
+                +1234567890
+              </p>
+              <p class="flex items-center justify-center text-gray-700">
+                <i class="fas fa-envelope mr-2 text-green-600"></i>
+                support@solarmart.com
+              </p>
+            </div>
+          </div>
+          <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+            Contact Support
+          </button>
+        </div>
+
+        <!-- Live Chat -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div class="text-center mb-6">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-comments text-3xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Live Chat</h3>
+            <p class="text-gray-600 mb-4">Chat with our technical experts in real-time</p>
+            <div class="flex items-center justify-center mb-4">
+              <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              <span class="ml-2 text-green-600">Agents Online</span>
+            </div>
+          </div>
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Start Chat
+          </button>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div class="text-center mb-6">
+            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-question-circle text-3xl text-purple-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">FAQs</h3>
+            <p class="text-gray-600 mb-4">Find quick answers to common questions</p>
+            <ul class="text-left space-y-2 mb-4">
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                Installation Guides
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                Warranty Information
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                Troubleshooting Tips
+              </li>
+            </ul>
+          </div>
+          <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
+            View FAQs
+          </button>
+        </div>
+      </div>
+
+      <!-- Support Banner -->
+      <div class="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white text-center">
+        <h3 class="text-2xl font-bold mb-4">Need Technical Assistance?</h3>
+        <p class="mb-6">Our team of solar experts is ready to assist you with any questions or concerns</p>
+        <button class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          Schedule a Consultation
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="1e7ccf2f-af3d-4a5d-90b0-838d60820fb0" data-section-id="1e7ccf2f-af3d-4a5d-90b0-838d60820fb0">
+
+
+<div id="root">
+  <section id="newsletter" class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-8 p-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold text-gray-800">Stay Updated</h2>
+            <p class="text-gray-600">
+              Subscribe to our newsletter for the latest solar energy news, exclusive offers, and expert tips.
+            </p>
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <i class="fas fa-tag text-green-600 mr-3"></i>
+                <span class="text-gray-700">Exclusive deals and promotions</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-newspaper text-green-600 mr-3"></i>
+                <span class="text-gray-700">Latest solar industry news</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-lightbulb text-green-600 mr-3"></i>
+                <span class="text-gray-700">Energy-saving tips and guides</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <form class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 transition-colors"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 transition-colors"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
+              >
+                <i class="fas fa-paper-plane mr-2"></i>
+                Subscribe Now
+              </button>
+            </form>
+            <p class="text-xs text-gray-500 text-center">
+              By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-700 mb-4">Follow us on social media</p>
+        <div class="flex justify-center space-x-4">
+          <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-blue-800 text-white rounded-full flex items-center justify-center hover:bg-blue-900 transition-colors">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="3bf88d0f-771d-4741-a280-c267a04d2117" data-section-id="3bf88d0f-771d-4741-a280-c267a04d2117">
+
+
+<div id="root">
+  <footer id="footer" class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-white mb-4">SolarMart</h3>
+          <p class="text-gray-400">Solarmart is a Supplier of crystalline solar photovoltaic modules, power systems, and service providers of solar photovoltaic systems.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Special Offers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Installation Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Maintenance</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns & Refunds</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-map-marker-alt mr-2 text-green-500"></i>
+              Abuja, Lagos, Kebbi, Nigeria
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-phone mr-2 text-green-500"></i>
+              +234-802-523-4859
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-envelope mr-2 text-green-500"></i>
+              sales@gosolarmart.com
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-clock mr-2 text-green-500"></i>
+              Mon - Fri: 9:00 AM - 6:00 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="border-t border-gray-800 pt-8 pb-4">
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <i class="fab fa-cc-visa text-3xl text-gray-400"></i>
+          <i class="fab fa-cc-mastercard text-3xl text-gray-400"></i>
+          <i class="fab fa-cc-paypal text-3xl text-gray-400"></i>
+          <i class="fab fa-cc-apple-pay text-3xl text-gray-400"></i>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
+        <p>&copy; 2025 SolarMart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
