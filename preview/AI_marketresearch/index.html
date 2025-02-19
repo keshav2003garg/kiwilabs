@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+       
+      
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['{{settings.fonts.primary}}', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+    
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: {{settings.fonts.primary}}, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: {{settings.fonts.secondary}}, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+      
+
+   </body>
+</html><script>window.projectId = "babcd92a-0cd9-4be3-8638-9e2acb64cdcb";</script><div id='RolloutPageContent'><element id="0f84a474-65ea-4bc0-86a2-a06859b49fd8" data-section-id="0f84a474-65ea-4bc0-86a2-a06859b49fd8">
+
+
+<div id="root">
+  <section id="hero" class="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-90"></div>
+    
+    <!-- Animated Background -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight mb-6 animate-fade-in">
+        Empower Your Business with Advanced AI Solutions and Infrastructure
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-delay">
+        Partner with us for AI market research, data-driven insights, strategic guidance, and cutting-edge GenAI application development.
+      </p>
+      
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105 animate-fade-in-delay-2">
+        Schedule a Free Consultation
+      </button>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-20"></div>
+    <div class="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-green-500 to-transparent opacity-20"></div>
+    <div class="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500 to-transparent opacity-20"></div>
+  </section>
+</div>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+</style>
+</element><element id="2dfef1dc-27d0-4a21-8e49-692b79cc3f32" data-section-id="2dfef1dc-27d0-4a21-8e49-692b79cc3f32">
+
+
+<div id="root">
+  <section id="about" class="min-h-screen flex items-center bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column - Text Content -->
+        <div class="space-y-8">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Mission</h2>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              We empower businesses with tailored AI-driven solutions to solve complex challenges and achieve long-term growth.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-gray-900">Our Vision</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              To be the leading catalyst in transforming businesses through innovative AI solutions, making advanced technology accessible and impactful for organizations of all sizes.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-gray-900">Our Values</h3>
+            <ul class="space-y-4 text-lg text-gray-700">
+              <li class="flex items-center">
+                <span class="h-2 w-2 bg-blue-500 rounded-full mr-3"></span>
+                Innovation & Excellence
+              </li>
+              <li class="flex items-center">
+                <span class="h-2 w-2 bg-blue-500 rounded-full mr-3"></span>
+                Client-Centric Approach
+              </li>
+              <li class="flex items-center">
+                <span class="h-2 w-2 bg-blue-500 rounded-full mr-3"></span>
+                Ethical AI Development
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column - Team Overview -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-gray-900">Our Team</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Our diverse team of AI specialists, data scientists, and industry experts brings together decades of combined experience in implementing cutting-edge AI solutions across various sectors.
+            </p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8">
+              <div class="text-center">
+                <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-3"/>
+                <p class="font-semibold text-gray-900">Dr. Sarah Chen</p>
+                <p class="text-sm text-gray-600">AI Director</p>
+              </div>
+              <div class="text-center">
+                <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-3"/>
+                <p class="font-semibold text-gray-900">Mark Thompson</p>
+                <p class="text-sm text-gray-600">Lead Engineer</p>
+              </div>
+              <div class="text-center">
+                <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-3"/>
+                <p class="font-semibold text-gray-900">Lisa Kumar</p>
+                <p class="text-sm text-gray-600">Data Scientist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="c1ad1b68-922f-494f-9a42-81cee17d96cf" data-section-id="c1ad1b68-922f-494f-9a42-81cee17d96cf">
+
+
+<div id="root">
+  <section id="services" class="min-h-screen flex items-center bg-gradient-to-b from-white to-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive AI solutions tailored to transform your business operations
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- AI Roadmap Development -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md">
+          <div class="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+            <i class="text-blue-500 text-3xl fas fa-map-signs"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">AI Roadmap Development</h3>
+          <p class="text-gray-600">Strategic planning and implementation guidance for your AI journey, ensuring alignment with business goals.</p>
+        </div>
+
+        <!-- AI Infrastructure Building -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md">
+          <div class="w-16 h-16 bg-green-50 rounded-lg flex items-center justify-center mb-6">
+            <i class="text-green-500 text-3xl fas fa-server"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">AI Infrastructure Building</h3>
+          <p class="text-gray-600">Robust and scalable AI infrastructure development to support your technological advancement.</p>
+        </div>
+
+        <!-- AI Market Research -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md">
+          <div class="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+            <i class="text-blue-500 text-3xl fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">AI Market Research</h3>
+          <p class="text-gray-600">Data-driven market insights and competitive analysis powered by advanced AI algorithms.</p>
+        </div>
+
+        <!-- GenAI Application Development -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md">
+          <div class="w-16 h-16 bg-green-50 rounded-lg flex items-center justify-center mb-6">
+            <i class="text-green-500 text-3xl fas fa-code"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">GenAI Application Development</h3>
+          <p class="text-gray-600">Custom generative AI solutions designed to meet your specific business requirements.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105">
+          Explore Our Services
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="a3e247a8-23ee-4218-b3c1-7ea1fe28f8af" data-section-id="a3e247a8-23ee-4218-b3c1-7ea1fe28f8af">
+
+
+<div id="root">
+  <section id="testimonials" class="min-h-screen flex items-center bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Discover how our AI solutions have transformed businesses across industries
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+          <div class="flex items-center mb-6">
+            <img src="https://avatar.iran.liara.run/public" alt="Client" class="w-16 h-16 rounded-full"/>
+            <div class="ml-4">
+              <h3 class="font-bold text-lg text-gray-900">Sarah Johnson</h3>
+              <p class="text-gray-600">CEO, TechForward</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "The AI infrastructure solutions provided by the team have completely transformed our operations. We've seen a 300% increase in efficiency and better decision-making capabilities."
+          </p>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+          <div class="flex items-center mb-6">
+            <img src="https://avatar.iran.liara.run/public" alt="Client" class="w-16 h-16 rounded-full"/>
+            <div class="ml-4">
+              <h3 class="font-bold text-lg text-gray-900">Michael Chen</h3>
+              <p class="text-gray-600">CTO, DataDrive</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "Their GenAI development expertise helped us launch a groundbreaking product in record time. The ROI has been exceptional, and the ongoing support is outstanding."
+          </p>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+          <div class="flex items-center mb-6">
+            <img src="https://avatar.iran.liara.run/public" alt="Client" class="w-16 h-16 rounded-full"/>
+            <div class="ml-4">
+              <h3 class="font-bold text-lg text-gray-900">Emily Rodriguez</h3>
+              <p class="text-gray-600">Director, AI Innovations</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "The AI market research insights we received were invaluable. It helped us identify new opportunities and stay ahead of the competition in our industry."
+          </p>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105">
+          Read More Success Stories
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="c44d520d-6f9e-4aaa-8247-ede822be5a7f" data-section-id="c44d520d-6f9e-4aaa-8247-ede822be5a7f">
+
+
+<div id="root">
+  <section id="trust" class="min-h-screen flex items-center bg-gray-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Our partnerships and certifications demonstrate our commitment to excellence in AI solutions
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Microsoft Partner -->
+        <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 text-center">
+          <div class="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fab fa-microsoft text-4xl text-white"></i>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">Microsoft AI Partner</h3>
+          <p class="text-gray-400 text-sm">Certified partner for Azure AI and cognitive services implementation</p>
+        </div>
+
+        <!-- AWS Partner -->
+        <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 text-center">
+          <div class="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fab fa-aws text-4xl text-white"></i>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">AWS Advanced Partner</h3>
+          <p class="text-gray-400 text-sm">Specialized in AWS AI and machine learning solutions</p>
+        </div>
+
+        <!-- ISO Certified -->
+        <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 text-center">
+          <div class="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-certificate text-4xl text-white"></i>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">ISO 27001 Certified</h3>
+          <p class="text-gray-400 text-sm">Highest standards of information security management</p>
+        </div>
+
+        <!-- Industry Recognition -->
+        <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 text-center">
+          <div class="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-award text-4xl text-white"></i>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">Industry Leader 2023</h3>
+          <p class="text-gray-400 text-sm">Recognized for excellence in AI innovation and implementation</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <div class="inline-flex items-center space-x-2 text-gray-300">
+          <i class="fas fa-shield-alt text-blue-500"></i>
+          <span>Verified by independent third-party organizations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="3fa5bd44-efa1-4ecc-9c7a-553a53ab16d8" data-section-id="3fa5bd44-efa1-4ecc-9c7a-553a53ab16d8">
+
+
+<div id="root">
+  <section id="resources" class="min-h-screen flex items-center bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Resources</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Explore our comprehensive guides and latest insights in AI technology
+        </p>
+      </div>
+
+      <!-- AI Implementation Guide -->
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-gray-900">AI Implementation Guide</h3>
+            <p class="text-gray-600">Download our comprehensive guide to implementing AI solutions in your business. Learn best practices, avoid common pitfalls, and accelerate your AI journey.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transform transition-all duration-300 hover:scale-105">
+              <i class="fas fa-download mr-2"></i> Download Free Guide
+            </button>
+          </div>
+          <div class="order-first md:order-last">
+            <img src="https://placehold.co/600x400?text=AI+Implementation+Guide" alt="AI Implementation Guide" class="rounded-lg w-full"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Posts -->
+      <div class="space-y-8">
+        <h3 class="text-2xl font-bold text-gray-900">Latest Insights</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+            <img src="https://placehold.co/800x450?text=AI+Trends+2024" alt="AI Trends" class="w-full"/>
+            <div class="p-6">
+              <h4 class="font-bold text-xl text-gray-900 mb-2">AI Trends to Watch in 2024</h4>
+              <p class="text-gray-600 mb-4">Discover the emerging AI technologies that will shape business innovation in the coming year.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">5 min read</span>
+                <button class="text-blue-500 hover:text-blue-600 font-semibold">Read More →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+            <img src="https://placehold.co/800x450?text=GenAI+Solutions" alt="GenAI Solutions" class="w-full"/>
+            <div class="p-6">
+              <h4 class="font-bold text-xl text-gray-900 mb-2">Implementing GenAI Solutions</h4>
+              <p class="text-gray-600 mb-4">A practical guide to integrating generative AI into your existing business processes.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">7 min read</span>
+                <button class="text-blue-500 hover:text-blue-600 font-semibold">Read More →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+            <img src="https://placehold.co/800x450?text=AI+Infrastructure" alt="AI Infrastructure" class="w-full"/>
+            <div class="p-6">
+              <h4 class="font-bold text-xl text-gray-900 mb-2">Building Robust AI Infrastructure</h4>
+              <p class="text-gray-600 mb-4">Learn how to create scalable and secure infrastructure for your AI applications.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">6 min read</span>
+                <button class="text-blue-500 hover:text-blue-600 font-semibold">Read More →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <button class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105">
+          View All Resources
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="30c3e2c1-dc65-4e34-ab68-bbc639a099f2" data-section-id="30c3e2c1-dc65-4e34-ab68-bbc639a099f2">
+
+
+<div id="root">
+  <section id="contact" class="min-h-screen flex items-center bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <div class="space-y-6">
+            <h2 class="text-4xl font-bold text-gray-900">Get In Touch</h2>
+            <p class="text-xl text-gray-600">
+              Ready to transform your business with AI? Let's discuss how we can help you achieve your goals.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fas fa-map-marker-alt text-blue-500 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Location</h3>
+                <p class="text-gray-600">123 Innovation Drive, Tech City, TC 12345</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fas fa-envelope text-blue-500 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Email</h3>
+                <p class="text-gray-600">contact@aicompany.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fas fa-phone text-blue-500 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Phone</h3>
+                <p class="text-gray-600">+1 (555) 123-4567</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors" placeholder="John Doe">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors" placeholder="john@example.com">
+            </div>
+
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors" placeholder="Your Company">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors" placeholder="Tell us about your project"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="762acf23-d5b5-446e-b8f1-4efe59da257e" data-section-id="762acf23-d5b5-446e-b8f1-4efe59da257e">
+
+
+<div id="root">
+  <footer id="footer" class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Main Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Company Info -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-bold text-white">AI Solutions</h3>
+          <p class="text-gray-400">Empowering businesses with advanced AI-driven solutions for sustainable growth and innovation.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-white">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-white">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI Roadmap Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI Infrastructure Building</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI Market Research</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">GenAI Development</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-white">Contact Us</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span>123 Innovation Drive, Tech City, TC 12345</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-phone text-blue-500"></i>
+              <span>+1 (555) 123-4567</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span>contact@aicompany.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="pt-8 border-t border-gray-800">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+          <div class="text-sm text-gray-400">
+            © 2024 AI Solutions. All rights reserved.
+          </div>
+          <div class="flex space-x-6 md:justify-end">
+            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</element></div>
+            <div id="page_complete">
+            <script src="/edit/edit.js"></script>
+            <script>
+                console.log('Page complete');
+                
+            </script>
+            </body>
+            </html>
+          
