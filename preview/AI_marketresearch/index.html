@@ -39,6 +39,7 @@
       <!-- Font stylesheet -->
 
       <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
       <!-- Core CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
@@ -212,15 +213,10 @@
       <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
       
       <style>
-        h1, h2, h3, h4, h5, h6 {
-          font-family: {{settings.fonts.primary}}, Inter, system-ui, sans-serif;
-        }
-        body {
-          font-family: {{settings.fonts.secondary}}, Inter, system-ui, sans-serif;
-        }
+       
       </style>
    </head>
-   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col font-[Inter]">
       <!-- Skip to main content link for accessibility -->
       <a href="#main-content" 
          class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
