@@ -1,0 +1,98 @@
+<div id="root">
+    <section id="solarCalculator" class="bg-neutral-900 text-white py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="animate__animated animate__fadeInLeft">
+            <h2 class="text-4xl font-bold mb-6">
+              Solar Savings <span class="text-[#2ecc71]">Calculator</span>
+            </h2>
+            <p class="text-gray-300 mb-8">
+              Discover how much you could save by switching to solar energy. Our calculator provides accurate estimates based on your current energy usage and location.
+            </p>
+            <div class="bg-neutral-800 p-8 rounded-xl">
+              <form id="solarCalcForm" class="space-y-6">
+                <div>
+                  <label class="block text-sm mb-2">Monthly Energy Bill ($)</label>
+                  <input type="number" id="monthlyBill" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none" required>
+                </div>
+                
+                <div>
+                  <label class="block text-sm mb-2">Daily Sunlight Hours</label>
+                  <select id="sunlightHours" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none">
+                    <option value="4">4-5 hours</option>
+                    <option value="6">6-7 hours</option>
+                    <option value="8">8+ hours</option>
+                  </select>
+                </div>
+  
+                <div>
+                  <label class="block text-sm mb-2">Roof Size (sq ft)</label>
+                  <input type="number" id="roofSize" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none" required>
+                </div>
+  
+                <button type="submit" class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-4 rounded-lg font-semibold transition duration-300">
+                  Calculate Savings
+                </button>
+              </form>
+            </div>
+          </div>
+  
+          <div id="calculationResults" class="hidden animate__animated animate__fadeInRight">
+            <div class="bg-neutral-800 p-8 rounded-xl">
+              <h3 class="text-2xl font-bold mb-6">Your Estimated Savings</h3>
+              
+              <div class="space-y-6">
+                <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
+                  <span>Monthly Savings</span>
+                  <span id="monthlySavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
+                </div>
+  
+                <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
+                  <span>Annual Savings</span>
+                  <span id="annualSavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
+                </div>
+  
+                <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
+                  <span>20-Year Savings</span>
+                  <span id="lifetimeSavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
+                </div>
+  
+                <div class="p-4 bg-[#2ecc71]/10 rounded-lg">
+                  <h4 class="font-semibold mb-2">System Recommendation</h4>
+                  <p id="systemRecommendation" class="text-gray-300">Based on your input, we recommend...</p>
+                </div>
+  
+                <button class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-3 rounded-lg font-semibold transition duration-300">
+                  Get Detailed Report
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script>
+      document.getElementById('solarCalcForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
+        const sunlightHours = parseFloat(document.getElementById('sunlightHours').value);
+        const roofSize = parseFloat(document.getElementById('roofSize').value);
+  
+        // Simple calculation example (replace with your actual calculation logic)
+        const monthlySavings = monthlyBill * 0.7;
+        const annualSavings = monthlySavings * 12;
+        const lifetimeSavings = annualSavings * 20;
+  
+        document.getElementById('monthlySavings').textContent = `$${monthlySavings.toFixed(2)}`;
+        document.getElementById('annualSavings').textContent = `$${annualSavings.toFixed(2)}`;
+        document.getElementById('lifetimeSavings').textContent = `$${lifetimeSavings.toFixed(2)}`;
+        
+        document.getElementById('calculationResults').classList.remove('hidden');
+        document.getElementById('calculationResults').classList.add('animate__fadeInRight');
+      });
+    </script>
+  </div>
+  </element><element id="a7e7e869-5bd9-4c14-be75-b5296ce49827" data-section-id="a7e7e869-5bd9-4c14-be75-b5296ce49827">
+  
