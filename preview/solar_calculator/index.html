@@ -1,98 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+       
+      
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['{{settings.fonts.primary}}', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['{{settings.fonts.secondary}}', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+    
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: {{settings.fonts.primary}}, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: {{settings.fonts.secondary}}, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+      
+
+   </body>
+</html><script>window.projectId = "f0b3ffb6-1c16-48e7-b71a-7d330d14db13";</script><div id='RolloutPageContent'><element id="317e1747-e715-43a3-8369-43639589b200" data-section-id="317e1747-e715-43a3-8369-43639589b200">
+
+
 <div id="root">
-    <section id="solarCalculator" class="bg-neutral-900 text-white py-20">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="animate__animated animate__fadeInLeft">
-            <h2 class="text-4xl font-bold mb-6">
-              Solar Savings <span class="text-[#2ecc71]">Calculator</span>
-            </h2>
-            <p class="text-gray-300 mb-8">
-              Discover how much you could save by switching to solar energy. Our calculator provides accurate estimates based on your current energy usage and location.
-            </p>
-            <div class="bg-neutral-800 p-8 rounded-xl">
-              <form id="solarCalcForm" class="space-y-6">
+  <header id="header" class="bg-neutral-900 text-white">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-[#2ecc71]">GoSolarMart</a>
+        
+        <div class="hidden md:flex space-x-6">
+            <a href="/" class="hover:text-[#2ecc71] transition duration-300">Home</a>
+            <a href="/products" class="hover:text-[#2ecc71] transition duration-300">Products</a>
+            <a href="/calculator" class="hover:text-[#2ecc71] transition duration-300">Solar Calculator</a>
+            <a href="/installation" class="hover:text-[#2ecc71] transition duration-300">Installation</a>
+            <a href="/about" class="hover:text-[#2ecc71] transition duration-300">About</a>
+            <a href="/blog" class="hover:text-[#2ecc71] transition duration-300">Blog</a>
+            <a href="/contact" class="hover:text-[#2ecc71] transition duration-300">Contact</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">Home</a>
+            <a href="/products" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">Products</a>
+            <a href="/calculator" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">Solar Calculator</a>
+            <a href="/installation" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">Installation</a>
+            <a href="/about" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">About</a>
+            <a href="/blog" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">Blog</a>
+            <a href="/contact" class="block px-3 py-2 text-white hover:bg-[#1a5f7a] rounded-md">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-20 min-h-[60vh] flex items-center">
+      <div class="max-w-2xl animate__animated animate__fadeIn">
+        <h1 class="text-5xl font-bold mb-6 text-[#2ecc71]">Power Your Home With Solar Energy</h1>
+        <p class="text-xl mb-8">Transform your energy consumption with sustainable solar solutions. Save money while saving the planet.</p>
+        <div class="flex gap-4">
+          <a href="/products" class="bg-[#2ecc71] hover:bg-[#27ae60] px-8 py-3 rounded-full font-semibold transition duration-300">Shop Now</a>
+          <a href="/calculator" class="border border-[#2ecc71] hover:bg-[#2ecc71] px-8 py-3 rounded-full font-semibold transition duration-300">Calculate Savings</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on window resize if open
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</div>
+</element><element id="469483c0-1756-42e4-b593-c62f0081e75c" data-section-id="469483c0-1756-42e4-b593-c62f0081e75c">
+
+
+<div id="root">
+  <section id="hero" class="bg-neutral-900 text-white relative overflow-hidden py-20">
+    <div class="absolute inset-0 bg-gradient-to-r from-neutral-900/90 to-neutral-900/70 z-10"></div>
+    
+    <div class="absolute inset-0 bg-pattern opacity-10" style="background-image: radial-gradient(#2ecc71 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+    <div class="container mx-auto px-4 relative z-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div class="animate__animated animate__fadeInLeft">
+          <h1 class="text-6xl font-bold mb-6">
+            <span class="text-[#2ecc71]">Harness</span> the Power of Solar Energy
+          </h1>
+          <p class="text-xl mb-8 text-gray-300">
+            Transform your home into a sustainable powerhouse with cutting-edge solar solutions. Reduce your carbon footprint while saving on energy bills.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/calculator" class="bg-[#2ecc71] hover:bg-[#27ae60] px-8 py-4 rounded-full font-semibold transition duration-300 flex items-center">
+              <span>Calculate Savings</span>
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="/products" class="border border-[#2ecc71] hover:bg-[#2ecc71] px-8 py-4 rounded-full font-semibold transition duration-300">
+              Browse Products
+            </a>
+          </div>
+          <div class="mt-12 flex items-center gap-8">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-[#2ecc71]">95%</div>
+              <div class="text-sm text-gray-400">Energy Savings</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-[#2ecc71]">10k+</div>
+              <div class="text-sm text-gray-400">Happy Customers</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-[#2ecc71]">24/7</div>
+              <div class="text-sm text-gray-400">Expert Support</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate__animated animate__fadeInRight">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-[#2ecc71] opacity-10 blur-xl rounded-full"></div>
+            <div class="relative bg-neutral-800 p-8 rounded-2xl">
+              <h3 class="text-2xl font-semibold mb-6">Quick Estimate</h3>
+              <form class="space-y-4">
                 <div>
-                  <label class="block text-sm mb-2">Monthly Energy Bill ($)</label>
-                  <input type="number" id="monthlyBill" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none" required>
+                  <label class="block text-sm mb-2">Monthly Energy Bill</label>
+                  <input type="number" placeholder="Enter amount in $" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none">
                 </div>
-                
-                <div>
-                  <label class="block text-sm mb-2">Daily Sunlight Hours</label>
-                  <select id="sunlightHours" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none">
-                    <option value="4">4-5 hours</option>
-                    <option value="6">6-7 hours</option>
-                    <option value="8">8+ hours</option>
-                  </select>
-                </div>
-  
                 <div>
                   <label class="block text-sm mb-2">Roof Size (sq ft)</label>
-                  <input type="number" id="roofSize" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none" required>
+                  <input type="number" placeholder="Approximate size" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none">
                 </div>
-  
-                <button type="submit" class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-4 rounded-lg font-semibold transition duration-300">
-                  Calculate Savings
+                <button type="submit" class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-3 rounded-lg font-semibold transition duration-300">
+                  Get Free Estimate
                 </button>
               </form>
             </div>
           </div>
-  
-          <div id="calculationResults" class="hidden animate__animated animate__fadeInRight">
-            <div class="bg-neutral-800 p-8 rounded-xl">
-              <h3 class="text-2xl font-bold mb-6">Your Estimated Savings</h3>
-              
-              <div class="space-y-6">
-                <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
-                  <span>Monthly Savings</span>
-                  <span id="monthlySavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
-                </div>
-  
-                <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
-                  <span>Annual Savings</span>
-                  <span id="annualSavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
-                </div>
-  
-                <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
-                  <span>20-Year Savings</span>
-                  <span id="lifetimeSavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
-                </div>
-  
-                <div class="p-4 bg-[#2ecc71]/10 rounded-lg">
-                  <h4 class="font-semibold mb-2">System Recommendation</h4>
-                  <p id="systemRecommendation" class="text-gray-300">Based on your input, we recommend...</p>
-                </div>
-  
-                <button class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-3 rounded-lg font-semibold transition duration-300">
-                  Get Detailed Report
-                </button>
-              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="15c556bf-57da-4473-a06a-0b09400370b1" data-section-id="15c556bf-57da-4473-a06a-0b09400370b1">
+
+
+<div id="root">
+  <section id="featuredProducts" class="bg-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold mb-4">Featured Solar Products</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover our top-rated solar solutions designed to maximize your energy efficiency</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp">
+          <div class="bg-neutral-100 h-64 flex items-center justify-center">
+            <div class="w-48 h-48 bg-[#2ecc71]/10 rounded-full flex items-center justify-center">
+              <svg class="w-24 h-24 text-[#2ecc71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Premium Solar Panel Kit</h3>
+            <p class="text-gray-600 mb-4">Complete solar panel system with mounting hardware and inverter</p>
+            <div class="flex justify-between items-center">
+              <span class="text-2xl font-bold text-[#1a5f7a]">$999</span>
+              <button class="bg-[#2ecc71] text-white px-4 py-2 rounded-full hover:bg-[#27ae60] transition duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <div class="bg-neutral-100 h-64 flex items-center justify-center">
+            <div class="w-48 h-48 bg-[#2ecc71]/10 rounded-full flex items-center justify-center">
+              <svg class="w-24 h-24 text-[#2ecc71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Solar Inverter Pro</h3>
+            <p class="text-gray-600 mb-4">High-efficiency inverter with smart monitoring capabilities</p>
+            <div class="flex justify-between items-center">
+              <span class="text-2xl font-bold text-[#1a5f7a]">$599</span>
+              <button class="bg-[#2ecc71] text-white px-4 py-2 rounded-full hover:bg-[#27ae60] transition duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <div class="bg-neutral-100 h-64 flex items-center justify-center">
+            <div class="w-48 h-48 bg-[#2ecc71]/10 rounded-full flex items-center justify-center">
+              <svg class="w-24 h-24 text-[#2ecc71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Smart Battery Storage</h3>
+            <p class="text-gray-600 mb-4">Advanced battery system for reliable power storage</p>
+            <div class="flex justify-between items-center">
+              <span class="text-2xl font-bold text-[#1a5f7a]">$1,299</span>
+              <button class="bg-[#2ecc71] text-white px-4 py-2 rounded-full hover:bg-[#27ae60] transition duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  
-    <script>
-      document.getElementById('solarCalcForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
-        const sunlightHours = parseFloat(document.getElementById('sunlightHours').value);
-        const roofSize = parseFloat(document.getElementById('roofSize').value);
-  
-        // Simple calculation example (replace with your actual calculation logic)
-        const monthlySavings = monthlyBill * 0.7;
-        const annualSavings = monthlySavings * 12;
-        const lifetimeSavings = annualSavings * 20;
-  
-        document.getElementById('monthlySavings').textContent = `$${monthlySavings.toFixed(2)}`;
-        document.getElementById('annualSavings').textContent = `$${annualSavings.toFixed(2)}`;
-        document.getElementById('lifetimeSavings').textContent = `$${lifetimeSavings.toFixed(2)}`;
-        
-        document.getElementById('calculationResults').classList.remove('hidden');
-        document.getElementById('calculationResults').classList.add('animate__fadeInRight');
-      });
-    </script>
-  </div>
-  </element><element id="a7e7e869-5bd9-4c14-be75-b5296ce49827" data-section-id="a7e7e869-5bd9-4c14-be75-b5296ce49827">
-  
+
+      <div class="text-center mt-12">
+        <a href="/products" class="inline-flex items-center text-[#2ecc71] hover:text-[#27ae60] font-semibold">
+          View All Products
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="f6971ea2-6b7a-4efe-86fc-dadf6a5dbdf7" data-section-id="f6971ea2-6b7a-4efe-86fc-dadf6a5dbdf7">
+
+
+<div id="root">
+  <section id="solarCalculator" class="bg-neutral-900 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-4xl font-bold mb-6">
+            Solar Savings <span class="text-[#2ecc71]">Calculator</span>
+          </h2>
+          <p class="text-gray-300 mb-8">
+            Discover how much you could save by switching to solar energy. Our calculator provides accurate estimates based on your current energy usage and location.
+          </p>
+          <div class="bg-neutral-800 p-8 rounded-xl">
+            <form id="solarCalcForm" class="space-y-6">
+              <div>
+                <label class="block text-sm mb-2">Monthly Energy Bill ($)</label>
+                <input type="number" id="monthlyBill" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none" required>
+              </div>
+              
+              <div>
+                <label class="block text-sm mb-2">Daily Sunlight Hours</label>
+                <select id="sunlightHours" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none">
+                  <option value="4">4-5 hours</option>
+                  <option value="6">6-7 hours</option>
+                  <option value="8">8+ hours</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm mb-2">Roof Size (sq ft)</label>
+                <input type="number" id="roofSize" class="w-full px-4 py-3 bg-neutral-700 rounded-lg focus:ring-2 focus:ring-[#2ecc71] focus:outline-none" required>
+              </div>
+
+              <button type="submit" class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-4 rounded-lg font-semibold transition duration-300">
+                Calculate Savings
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div id="calculationResults" class="hidden animate__animated animate__fadeInRight">
+          <div class="bg-neutral-800 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold mb-6">Your Estimated Savings</h3>
+            
+            <div class="space-y-6">
+              <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
+                <span>Monthly Savings</span>
+                <span id="monthlySavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
+              </div>
+
+              <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
+                <span>Annual Savings</span>
+                <span id="annualSavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
+              </div>
+
+              <div class="flex justify-between items-center p-4 bg-neutral-700 rounded-lg">
+                <span>20-Year Savings</span>
+                <span id="lifetimeSavings" class="text-2xl font-bold text-[#2ecc71]">$0</span>
+              </div>
+
+              <div class="p-4 bg-[#2ecc71]/10 rounded-lg">
+                <h4 class="font-semibold mb-2">System Recommendation</h4>
+                <p id="systemRecommendation" class="text-gray-300">Based on your input, we recommend...</p>
+              </div>
+
+              <button class="w-full bg-[#2ecc71] hover:bg-[#27ae60] py-3 rounded-lg font-semibold transition duration-300">
+                Get Detailed Report
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('solarCalcForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
+      const sunlightHours = parseFloat(document.getElementById('sunlightHours').value);
+      const roofSize = parseFloat(document.getElementById('roofSize').value);
+
+      // Simple calculation example (replace with your actual calculation logic)
+      const monthlySavings = monthlyBill * 0.7;
+      const annualSavings = monthlySavings * 12;
+      const lifetimeSavings = annualSavings * 20;
+
+      document.getElementById('monthlySavings').textContent = `$${monthlySavings.toFixed(2)}`;
+      document.getElementById('annualSavings').textContent = `$${annualSavings.toFixed(2)}`;
+      document.getElementById('lifetimeSavings').textContent = `$${lifetimeSavings.toFixed(2)}`;
+      
+      document.getElementById('calculationResults').classList.remove('hidden');
+      document.getElementById('calculationResults').classList.add('animate__fadeInRight');
+    });
+  </script>
+</div>
+</element><element id="a7e7e869-5bd9-4c14-be75-b5296ce49827" data-section-id="a7e7e869-5bd9-4c14-be75-b5296ce49827">
